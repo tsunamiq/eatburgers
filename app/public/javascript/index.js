@@ -16,6 +16,9 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     $("#search-submit-shadow").append(caloriesAllowed);
     var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
     $("#search-submit-shadow").append(search);
+    var filter = $('<div/>').attr({id: "filter-search"});
+    filter.html("All the filters");
+    $("#search-submit-shadow").append(filter);
     }
 
 $(document).ready(function(){

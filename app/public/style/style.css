@@ -100,8 +100,9 @@ body {
 
 #menu-search {
 	position: absolute;
-	top: 38%;
+	top: 25%;
 	left: 16%;
+	width: 240px;
 }
 
 #user {
@@ -120,4 +121,10 @@ body {
 	position: absolute;
 	top: 8%;
 	right: 26%;
+}
+
+#filter-search {
+	position: absolute;
+	top: 20%;
+	right: 20%;
 }
