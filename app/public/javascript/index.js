@@ -17,8 +17,22 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
     $("#search-submit-shadow").append(search);
     var filter = $('<div/>').attr({id: "filter-search"});
-    filter.html("All the filters");
+    filter.html("Filters:");
     $("#search-submit-shadow").append(filter);
+    addFilters();
+    }
+
+function addFilters() {
+    console.log("it runs");
+    var filterRestaurants = $('<div/>').attr({id: "filter-restaurants"});
+    filterRestaurants.html("Restaurants");
+    $("#filter-search").append(filterRestaurants);
+    var filterCalories = $('<div/>').attr({id: "filter-calories"});
+    filterCalories.html("Calories");
+    $("#filter-search").append(filterCalories);
+    var filterPrice = $('<div/>').attr({id: "filter-price"});
+    filterPrice.html("Price");
+    $("#filter-search").append(filterPrice);
     }
 
 $(document).ready(function(){
