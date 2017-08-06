@@ -100,6 +100,24 @@ body {
 
 #menu-search {
 	position: absolute;
+	top: 38%;
+	left: 16%;
+}
+
+#user {
+	position: absolute;
 	top: 8%;
 	left: 6%;
+}
+
+#calories-consumed {
+	position: absolute;
+	top: 8%;
+	right: 6%;
+}
+
+#calories-allowed {
+	position: absolute;
+	top: 8%;
+	right: 26%;
 }

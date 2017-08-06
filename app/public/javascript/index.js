@@ -7,11 +7,15 @@ function startMenuCall () {
         });
     };
 
-function placeElementsOnHomeOverlay() {
+function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
+    var user = $("<p>"+username+"</p>").attr({id: "user"});
+    $("#search-submit-shadow").append(user);
+    var caloriesConsumed = $("<p>Calories consumed: "+calories+"</p>").attr({id: "calories-consumed"});
+    $("#search-submit-shadow").append(caloriesConsumed);
+    var caloriesAllowed = $("<p>Daily calorie intake: "+caloriesAllowed+"</p>").attr({id: "calories-allowed"});
+    $("#search-submit-shadow").append(caloriesAllowed);
     var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
     $("#search-submit-shadow").append(search);
-
-
     }
 
 $(document).ready(function(){
@@ -25,6 +29,6 @@ $(document).ready(function(){
         $("#search-submit").animate({opacity:"0"});
         $("#search-submit-shadow").animate({opacity:"0.7"});
         startMenuCall();
-        placeElementsOnHomeOverlay();
+        placeElementsOnHomeOverlay("Bob Jones", 100, 2500);
     });
 });
