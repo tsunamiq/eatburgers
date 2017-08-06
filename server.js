@@ -25,6 +25,9 @@ app.set("view engine", "handlebars");
 //var routes = require("./controllers/...");
 //app.use("/", routes);
 
+// Importing routes to html
+require("./app/routes/html-routes.js")(app);
+
 // Requiring our models for syncing
 var db = require("./app/models");
 
