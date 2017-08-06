@@ -1,3 +1,4 @@
+//Grabs user data from the database
 function startMenuCall () {
     $.ajax({
         url: "heroku.app.com",
@@ -7,6 +8,7 @@ function startMenuCall () {
         });
     };
 
+//Appends elements to the Home overlay
 function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     var user = $("<p>"+username+"</p>").attr({id: "user"});
     $("#search-submit-shadow").append(user);
@@ -22,8 +24,8 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     addFilters();
     }
 
+//Adds the filters options next to the search bar
 function addFilters() {
-    console.log("it runs");
     var filterRestaurants = $('<div/>').attr({id: "filter-restaurants"});
     filterRestaurants.html("Restaurants");
     $("#filter-search").append(filterRestaurants);
@@ -36,8 +38,7 @@ function addFilters() {
     }
 
 $(document).ready(function(){
-
-    //Open the start button into the overlay
+    //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
         event.preventDefault();
         $(this).animate({height: "50%", width: "70%", top: "10%", left: "15%", sopacity:"0.7"});
@@ -45,7 +46,14 @@ $(document).ready(function(){
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
         $("#search-submit-shadow").animate({opacity:"0.7"});
+
+        //Runs first API call
         startMenuCall();
+
+        //Populate the overlay page
         placeElementsOnHomeOverlay("Bob Jones", 100, 2500);
+        
+        //Prevents re-clicks
+        $("#search-submit-shadow").off();
+        });
     });
-});
