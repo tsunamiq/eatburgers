@@ -97,3 +97,9 @@ body {
 	opacity: 0;
 	z-index:2;
 }
+
+#menu-search {
+	position: absolute;
+	top: 8%;
+	left: 6%;
+}

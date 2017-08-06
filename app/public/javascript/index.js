@@ -7,6 +7,13 @@ function startMenuCall () {
         });
     };
 
+function placeElementsOnHomeOverlay() {
+    var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
+    $("#search-submit-shadow").append(search);
+
+
+    }
+
 $(document).ready(function(){
 
     //Open the start button into the overlay
@@ -18,5 +25,6 @@ $(document).ready(function(){
         $("#search-submit").animate({opacity:"0"});
         $("#search-submit-shadow").animate({opacity:"0.7"});
         startMenuCall();
+        placeElementsOnHomeOverlay();
     });
 });
