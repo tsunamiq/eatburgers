@@ -5,8 +5,7 @@ function startMenuCall () {
     }).done(function(response) {
         console.log(response);    
         });
-    });
-}
+    };
 
 $(document).ready(function(){
 
@@ -19,4 +18,5 @@ $(document).ready(function(){
         $("#search-submit").animate({opacity:"0"});
         $("#search-submit-shadow").animate({opacity:"0.7"});
         startMenuCall();
-})
+    });
+});
