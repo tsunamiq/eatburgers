@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // add code to send the view.html file
   app.use("/", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/homefill.html"));
+        res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
  
