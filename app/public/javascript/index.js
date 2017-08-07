@@ -18,6 +18,8 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     $("#search-submit-shadow").append(caloriesAllowed);
     var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
     $("#search-submit-shadow").append(search);
+    var submit = $('<input/>').attr({ type: "submit", name:"search", value:"Submit", id: "menu-search-submit"});
+    $("#search-submit-shadow").append(submit);
     var filter = $('<div/>').attr({id: "filter-search"});
     filter.html("Filter by:");
     $("#search-submit-shadow").append(filter);
@@ -43,7 +45,7 @@ function addFilterEventHandlers(arrFilters) {
     for (i=0; i < arrFilters.length; i++) {
         $("#filter-"+arrFilters[i]).click(function() {
             //Hides the selected filter
-            $(this).animate({opacity:0}, 400, "swing", function() {
+            $(this).animate({opacity:"0"}, 400, "swing", function() {
                 $(this).css("visibility", "hidden");
             });
             //Has it show up underneath the Filters Applied area
@@ -61,9 +63,10 @@ function addFilterEventHandlers(arrFilters) {
             
             //Adds event handler to remove green button upon submission
             $("#green-plus-"+filterText).click(function() {
-                console.log(this);
-                $(this).css("visibility", "hidden");
-                $("#input-"+filterText).css("visibility", "hidden");
+                $(this).animate({opacity:"0"}, 800, "swing", function() {
+                    $(this).css("visibility", "hidden");
+                    $("#input-"+filterText).css("visibility", "hidden");
+                });
                 var userFilterInput = $("#input-"+filterText).val().trim();
                 $("#selected-"+filterText).text(userFilterInput);
             });   
@@ -77,7 +80,7 @@ $(document).ready(function(){
     //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
         event.preventDefault();
-        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", sopacity:"0.7"});
+        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});

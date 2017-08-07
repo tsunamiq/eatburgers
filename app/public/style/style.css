@@ -102,7 +102,7 @@ body {
 #menu-search {
 	position: absolute;
 	top: 25%;
-	left: 10%;
+	left: 7%;
 	width: 240px;
 }
 
@@ -133,7 +133,7 @@ body {
 #filter-container {
 	position: absolute;
 	visibility: hidden;
-	top: 36%;
+	top: 38%;
 	left: 10%;
 	padding: 10px;
 }
@@ -159,4 +159,21 @@ body {
 	position: relative;
 	top: 4px;
 	left: 4px;
+}
+
+#menu-search-submit {
+	position: relative;
+	top: 170px;
+	left: 80px;
+	box-shadow: rgb(255, 255, 255) 0px 1px 0px 0px inset;
+    background: linear-gradient(rgb(255, 255, 255) 5%, rgb(246, 246, 246) 100%) rgb(255, 255, 255);
+    border-radius: 6px;
+    border: 1px solid rgb(220, 220, 220);
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-shadow: rgb(255, 255, 255) 0px 1px 0px;
 }
