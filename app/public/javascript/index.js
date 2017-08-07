@@ -19,23 +19,27 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
     $("#search-submit-shadow").append(search);
     var filter = $('<div/>').attr({id: "filter-search"});
-    filter.html("Filters:");
+    filter.html("Available Filters:");
     $("#search-submit-shadow").append(filter);
     addFilters();
     }
 
 //Adds the filters options next to the search bar
 function addFilters() {
-    var filterRestaurants = $('<div/>').attr({id: "filter-restaurants"});
-    filterRestaurants.html("Restaurants");
-    $("#filter-search").append(filterRestaurants);
-    var filterCalories = $('<div/>').attr({id: "filter-calories"});
-    filterCalories.html("Calories");
-    $("#filter-search").append(filterCalories);
-    var filterPrice = $('<div/>').attr({id: "filter-price"});
-    filterPrice.html("Price");
-    $("#filter-search").append(filterPrice);
+    var arrFilters = ["Restaurants", "Calories", "Price"];
+    for (i=0; i < arrFilters.length; i++) {
+        var newFilter = $('<div/>').attr({id: "filter-"+arrFilters[i]});
+        newFilter.html(arrFilters[i]);
+        $("#filter-search").append(newFilter);
+        }
+    addFilterEventHandlers();
     }
+
+function addFilterEventHandlers() {
+    $("#filter-Restaurants").click(function() {
+        $(this).animate({opacity:"0"});
+    })
+}
 
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
@@ -54,6 +58,6 @@ $(document).ready(function(){
         placeElementsOnHomeOverlay("Bob Jones", 100, 2500);
         
         //Prevents re-clicks
-        $("#search-submit-shadow").off();
+        $("#search-submit-shadow").off("click");
         });
     });

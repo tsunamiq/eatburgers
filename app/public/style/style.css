@@ -102,7 +102,7 @@ body {
 #menu-search {
 	position: absolute;
 	top: 25%;
-	left: 16%;
+	left: 10%;
 	width: 240px;
 }
 
@@ -128,4 +128,8 @@ body {
 	position: absolute;
 	top: 20%;
 	right: 50%;
+}
+
+#filter-Restaurants {
+	margin-top: 10px;
 }
