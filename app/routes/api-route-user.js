@@ -6,10 +6,10 @@ var db = require("../models");
 // Data will be inputed and queried from the following routes
 // =============================================================
 
-
 module.exports = function(app) {
-
-  //Post for adding new user
+//==============================================================
+//Post for adding new user
+//==============================================================
   app.post("/api/user", function(req, res) {
     console.log("test")
     console.log(req.body);
@@ -23,8 +23,8 @@ module.exports = function(app) {
       height: req.body.height,
       weight: req.body.weight,
       lifestyle: req.body.lifestyle,
-      calorie_to_lose: req.body.calorie_to_lose,
-      weeks_to_lose: weeks_to_lose
+      weight_to_lose: req.body.weight_to_lose,
+      weeks_to_lose: req.body.weeks_to_lose
     }).then(function(data){
     	res.json(data);
     	console.log("user data:");
