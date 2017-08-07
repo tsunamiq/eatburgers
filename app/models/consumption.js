@@ -27,7 +27,18 @@ module.exports = function(sequelize, DataTypes) {
         validate: {
           len: [1]
         }
+      },
+      createdAt:{
+        type: DataTypes.DATE,
+        defaultValue: sequelize.literal('NOW()')
+      },
+      updatedAt:{
+        type: DataTypes.DATE,
+        defaultValue: sequelize.literal('NOW()')
       }
+    },
+    {
+      timestamps:true
     
   });
   return consumption;
