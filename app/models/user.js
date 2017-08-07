@@ -70,14 +70,24 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      week_to_lose: {
+      weeks_to_lose: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
           len: [1]
         }
+      },
+      createdAt:{
+        type: DataTypes.DATE,
+        defaultValue: sequelize.literal('NOW()')
+      },
+      updatedAt:{
+        type: DataTypes.DATE,
+        defaultValue: sequelize.literal('NOW()')
       }
-    
+    },
+    {
+      timestamps:true
   });
   return user;
 };
