@@ -38,10 +38,23 @@ function addFilters() {
     addFilterEventHandlers(arrFilters);
     }
 
+//Attaches on-click events for the filters
 function addFilterEventHandlers(arrFilters) {
     for (i=0; i < arrFilters.length; i++) {
         $("#filter-"+arrFilters[i]).click(function() {
+            //Hides the selected filter
             $(this).animate({opacity:"0"});
+            //Has it show up underneath the Filters Applied area
+            //Adds a text box for input and a green plus button to submit
+            var filterText = $(this).text();
+            var selectedFilter = $("<div>"+filterText+"</div>");
+            selectedFilter.attr({id:"selected-" + filterText});
+            var filterTextInput = $('<input/>').attr({ type: "text", name:"filter", value:"", id: "filter"});
+            var plusIcon = $('<img>').attr({src: "images/green_plus.png", id: "green-plus"});
+            $("#filter-container").append("</br>");
+            $("#filter-container").append(selectedFilter);
+            $("#filter-container").append(filterTextInput);
+            $("#filter-container").append(plusIcon);
         });
     };
 };
