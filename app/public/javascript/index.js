@@ -55,10 +55,12 @@ function addFilterEventHandlers(arrFilters) {
             selectedFilter.attr({id:"selected-" + filterText, class: "selected-Filters"});
             var filterTextInput = $('<input/>').attr({ type: "text", name:"filter", value:"", id: "input-"+filterText});
             var plusIcon = $('<img>').attr({src: "images/green_plus.png", class: "green-plus", id: "green-plus-"+filterText});
+            var minusIcon = $('<img>').attr({src: "images/red-minus.png", class: "red-minus", id: "red-minus-"+filterText});
             $("#filter-container").append(selectedFilter);
             $(selectedFilter).append("<br/>");
             $(selectedFilter).append(filterTextInput);
             $(selectedFilter).append(plusIcon);
+            $(selectedFilter).append(minusIcon);
             $("#filter-container").css("visibility", "visible");
             
             //Adds event handler to remove green button upon submission
