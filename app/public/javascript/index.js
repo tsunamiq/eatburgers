@@ -43,31 +43,35 @@ function addFilterEventHandlers(arrFilters) {
     for (i=0; i < arrFilters.length; i++) {
         $("#filter-"+arrFilters[i]).click(function() {
             //Hides the selected filter
-            $(this).animate({opacity:"0"});
+            $(this).animate({opacity:0}, 400, "swing", function() {
+                $(this).css("visibility", "hidden");
+            });
             //Has it show up underneath the Filters Applied area
             //Adds a text box for input and a green plus button to submit
             var filterText = $(this).text();
             var selectedFilter = $("<div>"+filterText+"</div>");
-            selectedFilter.attr({id:"selected-" + filterText});
+            selectedFilter.attr({id:"selected-" + filterText, class: "selected-Filters"});
             var filterTextInput = $('<input/>').attr({ type: "text", name:"filter", value:"", id: "filter"});
             var plusIcon = $('<img>').attr({src: "images/green_plus.png", id: "green-plus"});
-            $("#filter-container").append("</br>");
             $("#filter-container").append(selectedFilter);
-            $("#filter-container").append(filterTextInput);
-            $("#filter-container").append(plusIcon);
+            $(selectedFilter).append("<br/>");
+            $(selectedFilter).append(filterTextInput);
+            $(selectedFilter).append(plusIcon);
         });
     };
 };
+
+//Attaches on-click events for the filters
 
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
         event.preventDefault();
-        $(this).animate({height: "50%", width: "70%", top: "10%", left: "15%", sopacity:"0.7"});
+        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", sopacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
-        $("#search-submit-shadow").animate({opacity:"0.7"});
+        $(this).animate({opacity:"0.7"});
 
         //Runs first API call
         startMenuCall();
