@@ -1,33 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var user = sequelize.define("user", {
-      login_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      first_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      last_name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
+  var calorie_chart = sequelize.define("calorie_chart", {
       age: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -35,52 +7,54 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      email: {
+      inactive_male: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      height: {
+      semiactive_male: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      weight: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      lifestyle: {
+      active_male: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      calorie_to_lose: {
-        type: DataTypes.INTEGER,
+      inactive_female: {
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      week_to_lose: {
-        type: DataTypes.INTEGER,
+      semiactive_female: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      active_female: {
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       }
+    },
+      {
+        timestamps: false
+      
+      
     
   });
-  return user;
+  return calorie_chart;
 };
-
-
-
