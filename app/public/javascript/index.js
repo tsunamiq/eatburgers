@@ -21,6 +21,9 @@ function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     var filter = $('<div/>').attr({id: "filter-search"});
     filter.html("Available Filters:");
     $("#search-submit-shadow").append(filter);
+    var filterContainer = $('<div/>').attr({id: "filter-container"});
+    filterContainer.html("Filters Applied:")
+    $("#search-submit-shadow").append(filterContainer);
     addFilters();
     }
 
@@ -32,14 +35,16 @@ function addFilters() {
         newFilter.html(arrFilters[i]);
         $("#filter-search").append(newFilter);
         }
-    addFilterEventHandlers();
+    addFilterEventHandlers(arrFilters);
     }
 
-function addFilterEventHandlers() {
-    $("#filter-Restaurants").click(function() {
-        $(this).animate({opacity:"0"});
-    })
-}
+function addFilterEventHandlers(arrFilters) {
+    for (i=0; i < arrFilters.length; i++) {
+        $("#filter-"+arrFilters[i]).click(function() {
+            $(this).animate({opacity:"0"});
+        });
+    };
+};
 
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
@@ -60,4 +65,6 @@ $(document).ready(function(){
         //Prevents re-clicks
         $("#search-submit-shadow").off("click");
         });
+
+
     });
