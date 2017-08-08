@@ -10,21 +10,27 @@ function startMenuCall () {
 
 
 function buildWireFrame() {
-    var rowOne = $("<p>rowOne</p>").attr({class: "row"});
-    var colOneOne = $("<p>colOne</p>").attr({class: "col s4"});
-    var colOneTwo = $("<p>colOne</p>").attr({class: "col s2"});
-    var colOneThree = $("<p>colOne</p>").attr({class: "col s2"});
-    var colOneFour = $("<p>colOne</p>").attr({class: "col s2"});
-    var colOneFive = $("<p>colOne</p>").attr({class: "col s2"});
+    var rowOne = $("<p></p>").attr({class: "row"});
+    var colOneOne = $("<div>Username</div>").attr({id: "user-name", class: "col s6"});
+    var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "spacer", class: "col s2"});
+    var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s1"});
+    var colOneFour = $("<div>Calories Left</div>").attr({class: "col s2"});
+    var colOneFive = $("<div>Spacer</div>").attr({class: "col s1"});
     $(rowOne).append(colOneOne);
     $(rowOne).append(colOneTwo);
     $(rowOne).append(colOneThree);
     $(rowOne).append(colOneFour);
     $(rowOne).append(colOneFive);
     $("#search-submit-shadow").append(rowOne);
-    var rowTwo = $("<p>rowTwo</p>").attr({class: "row"});
-    var colTwo = $("<p>colTwo</p>").attr({class: "col s4"});
-    $(rowTwo).append(colTwo);
+    var rowTwo = $("<div></div>").attr({class: "row"});
+    var colTwoOne = $("<div>RestaurantName</div>").attr({class: "col s2"});
+    var colTwoTwo = $("<div>Food Item Name</div>").attr({class: "col s2"});
+    var colTwoThree = $("<div>Calories</div>").attr({class: "col s2"});
+    var colTwoFour = $("<div>Price</div>").attr({class: "col s2"});
+    $(rowTwo).append(colTwoOne);
+    $(rowTwo).append(colTwoTwo);
+    $(rowTwo).append(colTwoThree);
+    $(rowTwo).append(colTwoFour);
     $("#search-submit-shadow").append(rowTwo);
 }
 

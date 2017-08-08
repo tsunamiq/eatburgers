@@ -20,11 +20,7 @@ body {
 	height: 80px;
 }
 
-#login-username {
-
-	top: 20px;
-	right: 290px;
-	color: blue;
+#username {
 }
 
 #login-password {
