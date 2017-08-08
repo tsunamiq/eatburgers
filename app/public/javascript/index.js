@@ -21,15 +21,19 @@ function buildWireFrame() {
     $(rowOne).append(colOneThree);
     $(rowOne).append(colOneFour);
     $("#search-submit-shadow").append(rowOne);
-    var rowTwo = $("<div></div>").attr({class: "row"});
-    var colTwoOne = $("<div>RestaurantName</div>").attr({class: "col s2"});
-    var colTwoTwo = $("<div>Food Item Name</div>").attr({class: "col s2"});
+    var rowTwo = $("<div></div>").attr({id: "results-display", class: "row"});
+    var colTwoZero = $("<div></div>").attr({class: "col s1"});
+    var colTwoOne = $("<div>Restaurant Name</div>").attr({class: "col s3"});
+    var colTwoTwo = $("<div>Item</div>").attr({class: "col s2"});
     var colTwoThree = $("<div>Calories</div>").attr({class: "col s2"});
     var colTwoFour = $("<div>Price</div>").attr({class: "col s2"});
+    var colTwoFive = $("<div>Location</div>").attr({class: "col s2"});
+    $(rowTwo).append(colTwoZero);
     $(rowTwo).append(colTwoOne);
     $(rowTwo).append(colTwoTwo);
     $(rowTwo).append(colTwoThree);
     $(rowTwo).append(colTwoFour);
+    $(rowTwo).append(colTwoFive)
     $("#search-submit-shadow").append(rowTwo);
 
     var user = $("<div>Bob Jones</div>").attr({id: "user"});
@@ -40,6 +44,17 @@ function buildWireFrame() {
     $(colOneThree).append(caloriesConsumed);
     var caloriesLeft = $("<div>500</div>").attr({id: "calories-left"});
     $(colOneFour).append(caloriesLeft);
+
+    var restaurantName = $("<div>McDonald's</div>").attr({id: "restaurant-name"});
+    $(colTwoOne).append(restaurantName);
+    var foodItemName = $("<div>Big Mac</div>").attr({id: "calories-fixed"});
+    $(colTwoTwo).append(foodItemName);
+    var calorieValue = $("<div>1200</div>").attr({id: "calorie-value"});
+    $(colTwoThree).append(calorieValue);
+    var price = $("<div>$12.99</div>").attr({id: "calorie-value"});
+    $(colTwoFour).append(price);
+    var Location = $("<div>6256 Greenwich Ave</div>").attr({id: "location"});
+    $(colTwoFive).append(Location);
 
 }
 

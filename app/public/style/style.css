@@ -94,6 +94,7 @@ body {
 	border: none;
 	opacity: 0;
 	z-index:2;
+	overflow: hidden;
 }
 
 #menu-search {
@@ -113,10 +114,8 @@ body {
 	position: relative;
 }
 
-#calories-allowed {
-
-	top: 8%;
-	right: 26%;
+#results-display {
+	border: 1px solid white;
 }
 
 #filter-search {
