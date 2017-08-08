@@ -63,7 +63,7 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      calorie_to_lose: {
+      weight_to_lose: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {

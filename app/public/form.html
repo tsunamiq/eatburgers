@@ -1,26 +1,17 @@
  <!DOCTYPE html>
   <html>
     <head>
-    <link rel="stylesheet" href="index.css">
-
+     <!--  <link rel="stylesheet" href="index.css"> -->
       <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-
-          
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      
     </head>
 
-    <body>
-
-
-     <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-
-
+  <body>
+    
 
 
   <div class="parallax-container">
@@ -112,7 +103,7 @@
         </div>
 
 
-     <form action="#">
+     <form id="lifestyle" action="#">
     <p> How Active Are You?</br>
       <input name="group1" type="radio" id="Not_Active" />
       <label for="Not_Active">Not Active</label>
@@ -132,8 +123,22 @@
         
 
 
-<input type="submit">
+<!-- <input id="submit-form" type="submit"> -->
 
+
+        <a id="submit-form" class="waves-effect waves-light btn modal-trigger" href="#modal1">submit</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <ul id="userlist">
+            </ul>
+          </div>
+          <div class="modal-footer">
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" value="false">cancel</a>
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" value="true">confirm</a>
+          </div>
+        </div>
 
 
      
@@ -152,17 +157,29 @@
     <div class="parallax"><img src="https://static.pexels.com/photos/9055/pexels-photo.jpg"></div>
   </div>
 
-          
+         
 
- 
 
+
+  
+   
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<script type="text/javascript" src="javascript/userform.js"></script>
 <script>
 
  $(document).ready(function(){
       $('.parallax').parallax();
     });
 
-    </script>
+    $('.modal').modal();
 
-    </body>
+
+    
+
+</script>
+
+  </body>
   </html>
