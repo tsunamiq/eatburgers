@@ -8,11 +8,31 @@ function startMenuCall () {
         });
     };
 
+
+function buildWireFrame() {
+    var rowOne = $("<p>rowOne</p>").attr({class: "row"});
+    var colOneOne = $("<p>colOne</p>").attr({class: "col s4"});
+    var colOneTwo = $("<p>colOne</p>").attr({class: "col s2"});
+    var colOneThree = $("<p>colOne</p>").attr({class: "col s2"});
+    var colOneFour = $("<p>colOne</p>").attr({class: "col s2"});
+    var colOneFive = $("<p>colOne</p>").attr({class: "col s2"});
+    $(rowOne).append(colOneOne);
+    $(rowOne).append(colOneTwo);
+    $(rowOne).append(colOneThree);
+    $(rowOne).append(colOneFour);
+    $(rowOne).append(colOneFive);
+    $("#search-submit-shadow").append(rowOne);
+    var rowTwo = $("<p>rowTwo</p>").attr({class: "row"});
+    var colTwo = $("<p>colTwo</p>").attr({class: "col s4"});
+    $(rowTwo).append(colTwo);
+    $("#search-submit-shadow").append(rowTwo);
+}
+
 //Appends elements to the Home overlay
 function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
     var user = $("<p>"+username+"</p>").attr({id: "user"});
     $("#search-submit-shadow").append(user);
-    var caloriesConsumed = $("<p>Calories consumed: "+calories+"</p>").attr({id: "calories-consumed"});
+    var caloriesConsumed = $("<p>Calories consumed: "+calories+"</p>").attr({id: "calories-consumed", class: "col s4"});
     $("#search-submit-shadow").append(caloriesConsumed);
     var caloriesAllowed = $("<p>Daily calorie intake: "+caloriesAllowed+"</p>").attr({id: "calories-allowed"});
     $("#search-submit-shadow").append(caloriesAllowed);
@@ -88,11 +108,12 @@ $(document).ready(function(){
         $("#search-submit").animate({opacity:"0"});
         $(this).animate({opacity:"0.7"});
 
+        buildWireFrame();
+
         //Runs first API call
         startMenuCall();
 
         //Populate the overlay page
-        placeElementsOnHomeOverlay("Bob Jones", 100, 2500);
         
         //Prevents re-clicks
         $("#search-submit-shadow").off("click");
