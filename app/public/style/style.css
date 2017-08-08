@@ -20,7 +20,8 @@ body {
 	height: 80px;
 }
 
-#username {
+#user {
+	padding: 40px;
 }
 
 #login-password {
@@ -109,9 +110,7 @@ body {
 }
 
 #calories-consumed {
-
-	top: 8%;
-	right: 6%;
+	position: relative;
 }
 
 #calories-allowed {

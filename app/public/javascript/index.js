@@ -11,16 +11,15 @@ function startMenuCall () {
 
 function buildWireFrame() {
     var rowOne = $("<p></p>").attr({class: "row"});
-    var colOneOne = $("<div>Username</div>").attr({id: "user-name", class: "col s6"});
+    var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s6"});
     var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "spacer", class: "col s2"});
-    var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s1"});
+    var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s2"});
     var colOneFour = $("<div>Calories Left</div>").attr({class: "col s2"});
-    var colOneFive = $("<div>Spacer</div>").attr({class: "col s1"});
     $(rowOne).append(colOneOne);
+    $(rowOne).append(user);
     $(rowOne).append(colOneTwo);
     $(rowOne).append(colOneThree);
     $(rowOne).append(colOneFour);
-    $(rowOne).append(colOneFive);
     $("#search-submit-shadow").append(rowOne);
     var rowTwo = $("<div></div>").attr({class: "row"});
     var colTwoOne = $("<div>RestaurantName</div>").attr({class: "col s2"});
@@ -32,6 +31,16 @@ function buildWireFrame() {
     $(rowTwo).append(colTwoThree);
     $(rowTwo).append(colTwoFour);
     $("#search-submit-shadow").append(rowTwo);
+
+    var user = $("<div>Bob Jones</div>").attr({id: "user"});
+    $(colOneOne).append(user);
+    var caloriesFixed = $("<div>2500</div>").attr({id: "calories-fixed"});
+    $(colOneTwo).append(caloriesFixed);
+    var caloriesConsumed = $("<div>2000</div>").attr({id: "calories-consumed"});
+    $(colOneThree).append(caloriesConsumed);
+    var caloriesLeft = $("<div>500</div>").attr({id: "calories-left"});
+    $(colOneFour).append(caloriesLeft);
+
 }
 
 //Appends elements to the Home overlay
