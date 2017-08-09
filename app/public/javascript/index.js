@@ -13,9 +13,9 @@ function buildWireFrame() {
     var rowOne = $("<p></p>").attr({class: "row"});
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
     var colOneZero  = $("<div></div>").attr({class: "col s3"});
-    var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "fixed-calories", class: "col s2"});
-    var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s2"});
-    var colOneFour = $("<div>Calories Left</div>").attr({id: "calories-left", class: "col s2"});
+    var colOneTwo = $("<div></div>").attr({id: "fixed-calories", class: "col s2"});
+    var colOneThree = $("<div>Consumed:</div>").attr({id: "calories-consumed", class: "col s2"});
+    var colOneFour = $("<div>Calories Left:</div>").attr({id: "calories-left", class: "col s2"});
     $(rowOne).append(colOneOne);
     $(rowOne).append(colOneZero);
     $(rowOne).append(colOneTwo);
@@ -52,13 +52,17 @@ function buildWireFrame() {
     $("#search-submit-shadow").append(rowThree);
 
 
-    var user = $("<img src='images/user-512.png'>").attr({id: "user-icon"});
-    $(colOneOne).append(user);
-    var caloriesFixed = $("<div>2500</div>").attr({id: "calories-fixed"});
-    $(colOneTwo).append(caloriesFixed);
-    var caloriesConsumed = $("<div>2000</div>").attr({id: "calories-consumed"});
-    $(colOneThree).append(caloriesConsumed);
-    var caloriesLeft = $("<div>500</div>").attr({id: "calories-left"});
+    var userIcon = $("<img src='images/user-512.png'>").attr({id: "user-icon"});
+    $(colOneOne).append(userIcon);
+    var userName = $("<div>Allyson Felix</div>").attr({id: "user-name"});
+    $(colOneOne).append(userName);
+    var caloriesFixedHeader = $("<div>Daily Calories:</div>").attr({id: "calories-fixed-header"});
+    var caloriesFixedValue= $("<div>2500</div>").attr({id: "calories-fixed-value"});
+    $(colOneTwo).append(caloriesFixedHeader);
+    $(colOneTwo).append(caloriesFixedValue);
+    var caloriesConsumedHeader = $("<div>2000</div>");
+    $(colOneThree).append(caloriesConsumedHeader);
+    var caloriesLeft = $("<div>500</div>");
     $(colOneFour).append(caloriesLeft);
 
     var restaurantName = $("<div>McDonald's</div>").attr({id: "restaurant-name"});
@@ -71,29 +75,7 @@ function buildWireFrame() {
     $(colThreeFour).append(price);
     var Location = $("<div>6256 Greenwich Ave</div>").attr({id: "location"});
     $(colThreeFive).append(Location);
-
 }
-
-//Appends elements to the Home overlay
-function placeElementsOnHomeOverlay(username, calories, caloriesAllowed) {
-    var user = $("<p>"+username+"</p>").attr({id: "user"});
-    $("#search-submit-shadow").append(user);
-    var caloriesConsumed = $("<p>Calories consumed: "+calories+"</p>").attr({id: "calories-consumed", class: "col s4"});
-    $("#search-submit-shadow").append(caloriesConsumed);
-    var caloriesAllowed = $("<p>Daily calorie intake: "+caloriesAllowed+"</p>").attr({id: "calories-allowed"});
-    $("#search-submit-shadow").append(caloriesAllowed);
-    var search = $('<input/>').attr({ type: "text", name:"search", value:"Search", id: "menu-search"});
-    $("#search-submit-shadow").append(search);
-    var submit = $('<input/>').attr({ type: "submit", name:"search", value:"Submit", id: "menu-search-submit"});
-    $("#search-submit-shadow").append(submit);
-    var filter = $('<div/>').attr({id: "filter-search"});
-    filter.html("Filter by:");
-    $("#search-submit-shadow").append(filter);
-    var filterContainer = $('<div/>').attr({id: "filter-container"});
-    filterContainer.html("Filters Applied:")
-    $("#search-submit-shadow").append(filterContainer);
-    addFilters();
-    }
 
 //Adds the filters options next to the search bar
 function addFilters() {
