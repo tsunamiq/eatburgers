@@ -21,6 +21,13 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
+       gender: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -73,6 +80,20 @@ module.exports = function(sequelize, DataTypes) {
       weeks_to_lose: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      calorieNeed: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        validate: {
+          len: [1]
+        }
+      },
+      calorieNew: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
         validate: {
           len: [1]
         }

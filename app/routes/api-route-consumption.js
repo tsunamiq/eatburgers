@@ -1,5 +1,6 @@
 
 var db = require("../models");
+var sequelize = require('sequelize');
 
 // =============================================================
 // Routes for user consumption information.
@@ -22,28 +23,35 @@ module.exports = function(app) {
     })
   });
 
-  //Get method to collect all consumption data
-   app.get("/api/consumption/all", function(req, res) {
-    db.consumption.findAll({})
-    .then(function(data) {
-      res.json(data);
-      console.log("all consumption:");
-      console.log(data);
-    });
-
-    console.log("test user")
-  });
-
-  // Get method to collect consumption info on single user
-  app.get("/api/consumption/:user_id", function(req, res) {
-    db.consumption.findOne({
+  //Get method to collect all consumption data per user id
+   app.get("/api/consumption/all/:user_id", function(req, res) {
+    db.consumption.findAll({
       where: {
         user_id: req.params.user_id
       }
     })
     .then(function(data) {
       res.json(data);
+    })
 
+ 
+  });
+
+  // Get method to collect consumption info per day from a single user
+  app.get("/api/consumption/day/:user_id", function(req, res) {
+    db.consumption.findAll({   
+      where: {
+        $and: [
+          {user_id: req.params.user_id },
+          sequelize.where(
+            sequelize.fn('DATE', sequelize.col('createdAt')),
+            sequelize.literal('CURRENT_DATE')
+          )
+        ]
+      }
+    })
+    .then(function(data) {
+      res.json(data);
     });
   });
 

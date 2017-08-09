@@ -26,7 +26,8 @@ $(document).ready(function(){
             weight: $("#weight").val().trim(),
             lifestyle:$("input[name='group1']:checked").attr("id"),
             weight_to_lose: $("#weight_loss").val().trim(),
-            weeks_to_lose: $("#how_long").val().trim()
+            weeks_to_lose: $("#how_long").val().trim(),
+            gender:$("input[name='group2']:checked").attr("id")
         }
 
         $("#userlist").html("");
