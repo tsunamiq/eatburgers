@@ -1,5 +1,6 @@
 
 var db = require("../models");
+var calorieNeed = require("../modules/calorieNeedCalculator.js");
 
 // =============================================================
 // Routes for user information.
@@ -13,6 +14,9 @@ module.exports = function(app) {
   app.post("/api/user", function(req, res) {
     console.log("test")
     console.log(req.body);
+
+
+
     db.user.create({
       login_name: req.body.login_name,
       first_name: req.body.first_name,
@@ -24,12 +28,19 @@ module.exports = function(app) {
       weight: req.body.weight,
       lifestyle: req.body.lifestyle,
       weight_to_lose: req.body.weight_to_lose,
-      weeks_to_lose: req.body.weeks_to_lose
+      weeks_to_lose: req.body.weeks_to_lose,
+      gender:req.body.gender
     }).then(function(data){
     	res.json(data);
     	console.log("user data:");
     	console.log(data);
+      console.log("==================")
+      console.log(data)
+      calorieNeed(data.id,data.age, data.lifestyle,data.gender,data.weight_to_lose, data.weeks_to_lose);
+
     })
+
+
   });
 
   //Get method to collect all users data
