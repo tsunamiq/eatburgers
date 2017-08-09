@@ -12,7 +12,7 @@ function startMenuCall () {
 function buildWireFrame() {
     var rowOne = $("<p></p>").attr({class: "row"});
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
-    var colOneZero  = $("<div></div>").attr({id: "user-name", class: "col s3"});
+    var colOneZero  = $("<div></div>").attr({class: "col s3"});
     var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "fixed-calories", class: "col s2"});
     var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s2"});
     var colOneFour = $("<div>Calories Left</div>").attr({id: "calories-left", class: "col s2"});
