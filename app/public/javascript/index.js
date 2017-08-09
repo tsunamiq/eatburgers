@@ -11,17 +11,18 @@ function startMenuCall () {
 
 function buildWireFrame() {
     var rowOne = $("<p></p>").attr({class: "row"});
-    var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s6"});
-    var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "spacer", class: "col s2"});
+    var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
+    var colOneZero  = $("<div></div>").attr({id: "user-name", class: "col s3"});
+    var colOneTwo = $("<div>Fixed Calories</div>").attr({id: "fixed-calories", class: "col s2"});
     var colOneThree = $("<div>Consumed</div>").attr({id: "calories-consumed", class: "col s2"});
-    var colOneFour = $("<div>Calories Left</div>").attr({class: "col s2"});
+    var colOneFour = $("<div>Calories Left</div>").attr({id: "calories-left", class: "col s2"});
     $(rowOne).append(colOneOne);
-    $(rowOne).append(user);
+    $(rowOne).append(colOneZero);
     $(rowOne).append(colOneTwo);
     $(rowOne).append(colOneThree);
     $(rowOne).append(colOneFour);
     $("#search-submit-shadow").append(rowOne);
-    var rowTwo = $("<div></div>").attr({id: "results-display", class: "row"});
+    var rowTwo = $("<div></div>").attr({id: "results-display-header", class: "row"});
     var colTwoZero = $("<div></div>").attr({class: "col s1"});
     var colTwoOne = $("<div>Restaurant Name</div>").attr({class: "col s3"});
     var colTwoTwo = $("<div>Item</div>").attr({class: "col s2"});
@@ -35,8 +36,23 @@ function buildWireFrame() {
     $(rowTwo).append(colTwoFour);
     $(rowTwo).append(colTwoFive)
     $("#search-submit-shadow").append(rowTwo);
+    var rowThree = $("<div></div>").attr({id: "results-display", class: "row"});
+    var colThreeZero = $("<div></div>").attr({class: "col s1"});
+    var colThreeOne = $("<div></div>").attr({class: "col s3"});
+    var colThreeTwo = $("<div></div>").attr({class: "col s2"});
+    var colThreeThree = $("<div></div>").attr({class: "col s2"});
+    var colThreeFour = $("<div></div>").attr({class: "col s2"});
+    var colThreeFive = $("<div></div>").attr({class: "col s2"});
+    $(rowThree).append(colThreeZero);
+    $(rowThree).append(colThreeOne);
+    $(rowThree).append(colThreeTwo);
+    $(rowThree).append(colThreeThree);
+    $(rowThree).append(colThreeFour);
+    $(rowThree).append(colThreeFive)
+    $("#search-submit-shadow").append(rowThree);
 
-    var user = $("<div>Bob Jones</div>").attr({id: "user"});
+
+    var user = $("<img src='images/user-512.png'>").attr({id: "user-icon"});
     $(colOneOne).append(user);
     var caloriesFixed = $("<div>2500</div>").attr({id: "calories-fixed"});
     $(colOneTwo).append(caloriesFixed);
@@ -46,15 +62,15 @@ function buildWireFrame() {
     $(colOneFour).append(caloriesLeft);
 
     var restaurantName = $("<div>McDonald's</div>").attr({id: "restaurant-name"});
-    $(colTwoOne).append(restaurantName);
+    $(colThreeOne).append(restaurantName);
     var foodItemName = $("<div>Big Mac</div>").attr({id: "calories-fixed"});
-    $(colTwoTwo).append(foodItemName);
+    $(colThreeTwo).append(foodItemName);
     var calorieValue = $("<div>1200</div>").attr({id: "calorie-value"});
-    $(colTwoThree).append(calorieValue);
+    $(colThreeThree).append(calorieValue);
     var price = $("<div>$12.99</div>").attr({id: "calorie-value"});
-    $(colTwoFour).append(price);
+    $(colThreeFour).append(price);
     var Location = $("<div>6256 Greenwich Ave</div>").attr({id: "location"});
-    $(colTwoFive).append(Location);
+    $(colThreeFive).append(Location);
 
 }
 
