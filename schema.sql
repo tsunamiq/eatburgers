@@ -429,7 +429,7 @@ INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VA
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Asian Kick Chicken Wings 5pc', 'chicken', 1, 430, 200, 35, 1210);
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Asian Kick Chicken Wings 10pc', 'chicken', 1, 840, 400, 69, 2390);
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Asian Kick Chicken Wings 20pc', 'chicken', 1, 1680, 800, 138, 4780);
-INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Garlic Parmesan Chicken Wings 5pc', 'chicken', 1, 510, 360, 35 1080);
+INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Garlic Parmesan Chicken Wings 5pc', 'chicken', 1, 510, 360, 35, 1080);
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Garlic Parmesan Chicken Wings 10pc', 'chicken', 1, 1010, 710, 69, 2150);
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Garlic Parmesan Chicken Wings 20pc', 'chicken', 1, 2030, 1420, 139, 4290);
 INSERT INTO rallys (item, type, price, calories, calorieFat, protein, sodium) VALUES ('Medium Buffalo Chicken Wings 5pc', 'chicken', 1, 360, 210, 35, 1630);
