@@ -15,8 +15,16 @@ function  connectToSignUpPage() {
         });
     };
 
-function buildWireFrame() {
-    var rowOne = $("<p></p>").attr({class: "row"});
+
+function buildWireFrame(user_id) {
+    console.log("whatever");
+
+    //==========================================================================
+    //       User Row
+    //==========================================================================
+
+    var rowOne = $("<div></div>").attr({class: "row userRow", id:user_id});
+
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
     var colOneZero  = $("<div></div>").attr({class: "col s3"});
     var colOneTwo = $("<div></div>").attr({id: "fixed-calories", class: "col s2"});
@@ -28,6 +36,12 @@ function buildWireFrame() {
     $(rowOne).append(colOneThree);
     $(rowOne).append(colOneFour);
     $("#search-submit-shadow").append(rowOne);
+
+    //==========================================================================
+    //       Restuarant  Row
+    //==========================================================================
+
+
     var rowTwo = $("<div></div>").attr({id: "results-display-header", class: "row"});
     var colTwoZero = $("<div></div>").attr({class: "col s1"});
     var colTwoOne = $("<div>Restaurant Name</div>").attr({class: "col s3"});
@@ -57,7 +71,9 @@ function buildWireFrame() {
     $(rowThree).append(colThreeFive)
     $("#search-submit-shadow").append(rowThree);
 
-
+    //==========================================================================
+    //          User Info Data
+    //==========================================================================
     var userIcon = $("<img src='images/user-512.png'>").attr({id: "user-icon"});
     $(colOneOne).append(userIcon);
     var userName = $("<div>Allyson Felix</div>").attr({id: "user-name-1"});
@@ -70,6 +86,11 @@ function buildWireFrame() {
     $(colOneThree).append(caloriesConsumedHeader);
     var caloriesLeft = $("<div>500</div>");
     $(colOneFour).append(caloriesLeft);
+
+
+    //==========================================================================
+    //          Resturant Data
+    //==========================================================================
 
     var restaurantName = $("<div>McDonald's</div>").attr({id: "restaurant-name"});
     $(colThreeOne).append(restaurantName);
@@ -166,9 +187,12 @@ $(document).ready(function(){
         $("#search-submit").animate({opacity:"0"});
         $(this).animate({opacity:"0.7"});
 
-        //buildWireFrame();
+
+        buildWireFrame(user_id);
+
 
         LogInOrSignUpPrompt();
+
 
         //Runs first API call
         startMenuCall();
