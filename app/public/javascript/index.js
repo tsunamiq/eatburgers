@@ -11,7 +11,8 @@ function startMenuCall () {
 //Sends to SignUp Page
 function  connectToSignUpPage() {
     $.get("/api/form", function(data) {
-        console.log(data);    
+        console.log(data);
+        window.location.href = "/login.html";   
         });
     };
 
