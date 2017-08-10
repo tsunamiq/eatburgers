@@ -8,6 +8,13 @@ function startMenuCall () {
         });
     };
 
+//Sends to SignUp Page
+function  connectToSignUpPage() {
+    $.get("/api/authors", function(data) {
+        console.log(data);    
+        });
+    };
+
 
 function buildWireFrame(user_id) {
     console.log("whatever");
@@ -17,6 +24,7 @@ function buildWireFrame(user_id) {
     //==========================================================================
 
     var rowOne = $("<div></div>").attr({class: "row userRow", id:user_id});
+
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
     var colOneZero  = $("<div></div>").attr({class: "col s3"});
     var colOneTwo = $("<div></div>").attr({id: "fixed-calories", class: "col s2"});
@@ -143,21 +151,48 @@ function addFilterEventHandlers(arrFilters) {
     };
 };
 
+function DisplayLoginInputSubmit() {
+    $("#signup-div").animate({opacity: "0"});
+}
+
+function GoToSignUp() {
+    $("#login-div").animate({opacity: "0"});
+}
+
+function LogInOrSignUpPrompt() {
+    var LoginDiv = $("<div>Login</div>").attr({id: "login-div"});
+    var SignUpDiv = $("<div>Sign-up</div>").attr({id: "signup-div"});
+    $("#search-submit-shadow").append(LoginDiv);
+    $("#search-submit-shadow").append(SignUpDiv);
+    $("#login-div").click(function (){
+        DisplayLoginInputSubmit();
+    });
+    $("#signup-div").click(function (){
+        GoToSignUp();
+        connectToSignUpPage();
+    });
+}
+
 //Attaches on-click events for the filters
 
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
         $("#search-submit-shadow").off("click");
-        console.log("on click button");
         event.preventDefault();
-        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
+        $(this).animate({height: "22%", width: "12%", top: "20%", left: "25%", opacity:"0.7"});
+
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
         $(this).animate({opacity:"0.7"});
 
+
         buildWireFrame(user_id);
+
+
+        LogInOrSignUpPrompt();
+
 
         //Runs first API call
         startMenuCall();
