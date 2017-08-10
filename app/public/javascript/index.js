@@ -10,6 +10,7 @@ function startMenuCall () {
 
 
 function buildWireFrame() {
+    console.log("whatever");
     var rowOne = $("<p></p>").attr({class: "row"});
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
     var colOneZero  = $("<div></div>").attr({class: "col s3"});
@@ -54,7 +55,7 @@ function buildWireFrame() {
 
     var userIcon = $("<img src='images/user-512.png'>").attr({id: "user-icon"});
     $(colOneOne).append(userIcon);
-    var userName = $("<div>Allyson Felix</div>").attr({id: "user-name"});
+    var userName = $("<div>Allyson Felix</div>").attr({id: "user-name-1"});
     $(colOneOne).append(userName);
     var caloriesFixedHeader = $("<div>Daily Calories:</div>").attr({id: "calories-fixed-header"});
     var caloriesFixedValue= $("<div>2500</div>").attr({id: "calories-fixed-value"});
@@ -129,6 +130,8 @@ function addFilterEventHandlers(arrFilters) {
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
+        $("#search-submit-shadow").off("click");
+        console.log("on click button");
         event.preventDefault();
         $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
@@ -144,7 +147,6 @@ $(document).ready(function(){
         //Populate the overlay page
         
         //Prevents re-clicks
-        $("#search-submit-shadow").off("click");
         });
 
 
