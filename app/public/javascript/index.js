@@ -8,6 +8,12 @@ function startMenuCall () {
         });
     };
 
+//Sends to SignUp Page
+function  connectToSignUpPage() {
+    $.get("/api/authors", function(data) {
+        console.log(data);    
+        });
+    };
 
 function buildWireFrame() {
     var rowOne = $("<p></p>").attr({class: "row"});
@@ -124,11 +130,26 @@ function addFilterEventHandlers(arrFilters) {
     };
 };
 
+function DisplayLoginInputSubmit() {
+    $("#signup-div").animate({opacity: "0"});
+}
+
+function GoToSignUp() {
+    $("#login-div").animate({opacity: "0"});
+}
+
 function LogInOrSignUpPrompt() {
     var LoginDiv = $("<div>Login</div>").attr({id: "login-div"});
     var SignUpDiv = $("<div>Sign-up</div>").attr({id: "signup-div"});
     $("#search-submit-shadow").append(LoginDiv);
     $("#search-submit-shadow").append(SignUpDiv);
+    $("#login-div").click(function (){
+        DisplayLoginInputSubmit();
+    });
+    $("#signup-div").click(function (){
+        GoToSignUp();
+        connectToSignUpPage();
+    });
 }
 
 //Attaches on-click events for the filters
