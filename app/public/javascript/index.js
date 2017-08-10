@@ -10,7 +10,6 @@ function startMenuCall () {
 
 
 function buildWireFrame() {
-    console.log("whatever");
     var rowOne = $("<p></p>").attr({class: "row"});
     var colOneOne = $("<div></div>").attr({id: "user-name", class: "col s3"});
     var colOneZero  = $("<div></div>").attr({class: "col s3"});
@@ -125,21 +124,30 @@ function addFilterEventHandlers(arrFilters) {
     };
 };
 
+function LogInOrSignUpPrompt() {
+    var LoginDiv = $("<div>Login</div>").attr({id: "login-div"});
+    var SignUpDiv = $("<div>Sign-up</div>").attr({id: "signup-div"});
+    $("#search-submit-shadow").append(LoginDiv);
+    $("#search-submit-shadow").append(SignUpDiv);
+}
+
 //Attaches on-click events for the filters
 
 $(document).ready(function(){
     //Opens the start button, expands into the search overlay
     $("#search-submit-shadow").click(function() {
         $("#search-submit-shadow").off("click");
-        console.log("on click button");
         event.preventDefault();
-        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
+        $(this).animate({height: "22%", width: "12%", top: "20%", left: "25%", opacity:"0.7"});
+
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
         $(this).animate({opacity:"0.7"});
 
-        buildWireFrame();
+        //buildWireFrame();
+
+        LogInOrSignUpPrompt();
 
         //Runs first API call
         startMenuCall();
