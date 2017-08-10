@@ -10,8 +10,9 @@ function startMenuCall () {
 
 //Sends to SignUp Page
 function  connectToSignUpPage() {
-    $.get("/api/authors", function(data) {
-        console.log(data);    
+    $.get("/api/form", function(data) {
+        console.log(data);
+        window.location.href = "/login.html";   
         });
     };
 
@@ -153,6 +154,11 @@ function addFilterEventHandlers(arrFilters) {
 
 function DisplayLoginInputSubmit() {
     $("#signup-div").animate({opacity: "0"});
+    var loginForm = $('<form action="/get" id="signup-form"></form>');
+
+    $("#signup-form").append();
+
+    $("#signup-div").append();
 }
 
 function GoToSignUp() {
