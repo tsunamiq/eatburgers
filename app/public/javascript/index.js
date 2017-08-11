@@ -151,7 +151,9 @@ function addFilterEventHandlers(arrFilters) {
 };
 
 function GoToSignUp() {
-    $("#login-div").animate({opacity: "0"});
+    $.get("/form", function(data) {
+        $("html").html(data);
+        });
 }
 
 function LogInOrSignUpPrompt() {
@@ -163,8 +165,8 @@ function LogInOrSignUpPrompt() {
         DisplayLoginInputSubmit();
     });
     $("#signup-div").click(function (){
+        console.log("AAAA");
         GoToSignUp();
-        connectToSignUpPage();
     });
 }
 

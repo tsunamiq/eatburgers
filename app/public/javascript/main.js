@@ -183,7 +183,7 @@ function DisplayLoginInputSubmit() {
 
 $(document).ready(function(){
 
-    $("#search-submit-shadow").click(function() {
+    $("#search-submit-shadow").load(function() {
         $("#search-submit-shadow").off("click");
         event.preventDefault();
         $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
