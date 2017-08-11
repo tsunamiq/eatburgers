@@ -182,21 +182,19 @@ function DisplayLoginInputSubmit() {
 //Attaches on-click events for the filters
 
 $(document).ready(function(){
+
     //Opens the start button, expands into the search overlay
-    $("#search-submit-shadow").click(function() {
-        $("#search-submit-shadow").off("click");
-        event.preventDefault();
-        $(this).animate({height: "42%", width: "42%", top: "20%", left: "25%", opacity:"0.7"});
+        $("search-submit-shadow").animate({height: "70%", width: "70%", top: "20%", left: "25%", opacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
-        $(this).animate({opacity:"0.7"});
+        $("search-submit-shadow").animate({opacity:"0.7"});
+
+        buildWireFrame();
 
 
-        //buildWireFrame();
 
-
-        LogInOrSignUpPrompt();
+        //LogInOrSignUpPrompt();
 
 
         //Runs first API call
@@ -207,5 +205,3 @@ $(document).ready(function(){
         //Prevents re-clicks
         });
 
-
-    });
