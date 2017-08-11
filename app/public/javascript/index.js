@@ -196,7 +196,7 @@ $(document).ready(function(){
         $(this).animate({opacity:"0.7"});
 
 
-        buildWireFrame(user_id);
+        // buildWireFrame();
 
 
         LogInOrSignUpPrompt();
