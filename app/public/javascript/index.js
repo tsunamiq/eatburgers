@@ -1,6 +1,6 @@
 //Grabs user data from the database
 function startMenuCall () {
-    $.ajax({
+    $.post({
         url: "heroku.app.com",
         method: "GET"
     }).done(function(response) {
@@ -170,13 +170,14 @@ function LogInOrSignUpPrompt() {
 
 function DisplayLoginInputSubmit() {
     $("#signup-div").animate({opacity: "0"});
-    var loginForm = $('<form action="/get" id="signup-form"></form>');
+    var loginForm = $('<form action="/login" method="get" id="signup-form"></form>');
     var usernameInput = $('<input type="username" id="username-input" value="username" name="Allyson"><br>;');
     var passwordInput = $('<input type="password" id="password-input" password="password" name="password"><br>;');
     var submitButton  = $('<input type="submit" id="login-submit" value="Submit"> ');
-    $("#search-submit-shadow").append(usernameInput);
-    $("#search-submit-shadow").append(passwordInput);
-    $("#search-submit-shadow").append(submitButton);
+    $(loginForm).append(usernameInput);
+    $(loginForm).append(passwordInput);
+    $(loginForm).append(submitButton);
+    $("#search-submit-shadow").append(loginForm);
 }
 //Attaches on-click events for the filters
 
