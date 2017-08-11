@@ -15,6 +15,7 @@ module.exports = function(app) {
  
 
   app.get("/form", function(req, res) {
+
   	console.log(req.body);
         res.render("form.html");
   });
