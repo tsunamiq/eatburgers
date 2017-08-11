@@ -1,6 +1,6 @@
 //Grabs user data from the database
 function startMenuCall () {
-    $.ajax({
+    $.post({
         url: "heroku.app.com",
         method: "GET"
     }).done(function(response) {
@@ -18,8 +18,6 @@ function  connectToSignUpPage() {
 
 
 function buildWireFrame(user_id) {
-    console.log("whatever");
-
     //==========================================================================
     //       User Row
     //==========================================================================
@@ -152,18 +150,6 @@ function addFilterEventHandlers(arrFilters) {
     };
 };
 
-function DisplayLoginInputSubmit() {
-    $("#signup-div").animate({opacity: "0"});
-    var loginForm = $('<form action="/get" id="signup-form"></form>');
-    var usernameInput = $('<input type="username" id="username-input" name="Allyson"><br>;');
-    var passwordInput = $('<input type="password" id="password-input" name="password"><br>;');
-    var submitButton  = $('<input type="submit" value="Submit"> id="login-submit"');
-    console.log('fjdsjf');
-    $("#search-submit-shadow").append(usernameInput);
-    $("#search-submit-shadow").append(passwordInput);
-    $("#search-submit-shadow").append(submitButton);
-}
-
 function GoToSignUp() {
     $("#login-div").animate({opacity: "0"});
 }
@@ -182,6 +168,17 @@ function LogInOrSignUpPrompt() {
     });
 }
 
+function DisplayLoginInputSubmit() {
+    $("#signup-div").animate({opacity: "0"});
+    var loginForm = $('<form action="/login" method="get" id="signup-form"></form>');
+    var usernameInput = $('<input type="username" id="username-input" value="username" name="Allyson"><br>;');
+    var passwordInput = $('<input type="password" id="password-input" password="password" name="password"><br>;');
+    var submitButton  = $('<input type="submit" id="login-submit" value="Submit"> ');
+    $(loginForm).append(usernameInput);
+    $(loginForm).append(passwordInput);
+    $(loginForm).append(submitButton);
+    $("#search-submit-shadow").append(loginForm);
+}
 //Attaches on-click events for the filters
 
 $(document).ready(function(){
@@ -189,7 +186,7 @@ $(document).ready(function(){
     $("#search-submit-shadow").click(function() {
         $("#search-submit-shadow").off("click");
         event.preventDefault();
-        $(this).animate({height: "42%", width: "32%", top: "20%", left: "25%", opacity:"0.7"});
+        $(this).animate({height: "42%", width: "42%", top: "20%", left: "25%", opacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});

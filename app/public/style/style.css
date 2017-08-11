@@ -24,11 +24,20 @@ body {
 }
 
 #username-input {
-
+	position: relative;
+	top: 100px;
+	left: 50px;
+	color: black;
 }
 
 #password-input {
-	
+	position: relative;
+	background: white;
+	color: black;
+	height: 27px;
+	width: 204px;
+	top: 120px;
+	left: 50px;
 }
 
 #signup-div {
@@ -83,9 +92,9 @@ body {
 }
 
 #login-submit {
-
-	top: 20px;
-	right: 30px;
+	position: relative;
+	top: 120px;
+	left: 50px;
 	color: blue;
 }
 

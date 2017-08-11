@@ -14,12 +14,18 @@ module.exports = function(app) {
  
  
 
-  app.get("/form", function(req, res) {
+  app.post("/form", function(req, res) {
+  		console.log(req.body);
         res.sendFile(path.join(__dirname, "../public/form.html"));
   });
 
   app.get("/", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/index.html"));
   });
+
+   app.get("/login", function(req, res) {
+        res.sendFile(path.join(__dirname, "../public/main.html"));
+  });
+
 
 };
