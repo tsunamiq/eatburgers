@@ -27,6 +27,7 @@ require("./app/routes/html-routes.js")(app);
 //Importing Api routes
 require("./app/routes/api-route-user.js")(app);
 require("./app/routes/api-route-consumption.js")(app);
+require("./app/routes/api-restaurant.js")(app);
 
 
 
