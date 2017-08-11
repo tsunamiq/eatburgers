@@ -16,6 +16,7 @@ module.exports = function(app) {
  
 
   app.get("/form", function(req, res) {
+
   	console.log(req.body);
        res.sendFile(path.join(__dirname, "../public/form.html"));
   });
