@@ -5,6 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var fs = require('fs');
 
 
 // Routes
@@ -16,7 +17,7 @@ module.exports = function(app) {
 
   app.get("/form", function(req, res) {
   	console.log(req.body);
-        res.render("form.html");
+       res.sendFile(path.join(__dirname, "../public/form.html"));
   });
 
   app.get("/", function(req, res) {
@@ -26,6 +27,4 @@ module.exports = function(app) {
    app.get("/login", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/main.html"));
   });
-
-
-};
+}
