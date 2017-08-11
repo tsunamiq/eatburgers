@@ -183,15 +183,17 @@ function DisplayLoginInputSubmit() {
 
 $(document).ready(function(){
 
-    //Opens the start button, expands into the search overlay
-        $("search-submit-shadow").animate({height: "70%", width: "70%", top: "20%", left: "25%", opacity:"0.7"});
+    $("#search-submit-shadow").click(function() {
+        $("#search-submit-shadow").off("click");
+        event.preventDefault();
+        $(this).animate({height: "70%", width: "70%", top: "10%", left: "15%", opacity:"0.7"});
         $("#home-prompt-1").animate({opacity:"0"});
         $("#home-prompt-2").animate({opacity:"0"});
         $("#search-submit").animate({opacity:"0"});
-        $("search-submit-shadow").animate({opacity:"0.7"});
+        $(this).animate({opacity:"0.7"});
+
 
         buildWireFrame();
-
 
 
         //LogInOrSignUpPrompt();
@@ -200,8 +202,11 @@ $(document).ready(function(){
         //Runs first API call
         //startMenuCall();
 
+        //Runs first API call
+        //startMenuCall();
+
         //Populate the overlay page
         
         //Prevents re-clicks
         });
-
+});

@@ -177,6 +177,7 @@ body {
 
 #results-display {
 	border: 1px solid white;
+	background: black;
 }
 
 #user {
