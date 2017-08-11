@@ -5,7 +5,7 @@
 
 $(document).ready(function(){
 
-
+	$("#submit").on("click", function(event) {
 		// ID FROM SESSION
 		var user_id = 1;
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
 	        console.log(data);
 
 	        calories_fixed = data[0].calorieNeed;
-	        $("#user_name").append(data[0].first_name + " " + last_name);
-	        $("#calories_fixed").append(data[0].calorieNeed);
+	        $("#user-name").append(data[0].first_name + " " + last_name);
+	        $("#fixed-calories").append(data[0].calorieNeed);
 
 	        //ajax call to get calories consumed in one day and calories left
 	        $.get("/api/consumption/day/"+user_id).done(function(data) {
@@ -32,10 +32,11 @@ $(document).ready(function(){
 	        	}
 
 	        	calories_left = calories_fixed - calories_consumed;
-	        	$("#calories_consumed").append(calories_consumed);
+	        	$("#calories-consumed").append(calories_consumed);
 	        	$("#calories_left").append(calories_left);
 	    	});
 	    });
+	});
 
 });
 
