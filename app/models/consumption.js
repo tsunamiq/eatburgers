@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       calorie: {
-        type: DataTypes.INTERGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
           len: [1]

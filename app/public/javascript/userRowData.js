@@ -7,7 +7,9 @@ $(document).ready(function(){
 
 
 		// ID FROM SESSION
-		var user_id = $(".user_id").attr("value");
+		var user_id = 1;
+
+		//$(".user_id").attr("value");
 
 		var calories_fixed;
 		var calories_left;
