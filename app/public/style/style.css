@@ -60,7 +60,7 @@ body {
 
 #user-icon {
 	position: relative;
-	top: 10px;
+	top: 0px;
 	left: 20px;
 	height: 70px;
 	width: 70px;
@@ -68,9 +68,9 @@ body {
 
 #user-name {
 	position: relative;
-	top: 10px;
+	top: 0px;
 	left: 55px;
-	margin-top: 5px;
+	margin-top: 15px;
 	margin-bottom: 20px;
 }
 
@@ -166,7 +166,7 @@ body {
 }
 
 #user {
-
+	background: black;
 	top: 8%;
 	left: 6%;
 }
@@ -178,10 +178,6 @@ body {
 
 #results-display {
 	border: 1px solid white;
-	background: black;
-}
-
-#user {
 	background: black;
 }
 

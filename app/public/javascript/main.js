@@ -1,12 +1,16 @@
-//Grabs user data from the database
-function startMenuCall () {
-    $.post({
-        url: "heroku.app.com",
+//Grabs user data and appends it to the page
+function grabsUserData() {
+    $.get({
+        url: "/api/users/",
         method: "GET"
     }).done(function(response) {
-        console.log(response);    
-        });
-    };
+        $("#user-name-1").text(response[0].first_name +" "+ response[0].last_name);
+        console.log(response[0]);
+        for (i=0; i < 10; i++) {
+            console.log("A");
+        }
+    })
+};
 //Attaches on-click events for the filtersS
 
 function startMenuCall () {
@@ -52,11 +56,7 @@ function startMenuCall () {
         });
     };
 
-function hideCode() {
-
-
-}
-
 $(document).ready(function(){
         startMenuCall();
+        grabsUserData();
 });
