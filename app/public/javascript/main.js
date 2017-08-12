@@ -60,20 +60,31 @@ function startMenuCall () {
                 //Adds price and calorie values to each div
                 $(restaurantDiv).attr("calories", response[i].calories);
                 $(restaurantDiv).attr("price", response[i].price);
+                $(restaurantDiv).attr("item", response[i].item);
+                $(restaurantDiv).attr("restaurant", response[i].item);
 
                 //Adds on-click events to each div
                 $(restaurantDiv).on("click",function(){
                     var calorieValue = parseInt($(this).attr("calories"));
-                    var priceValue = $(this).attr("price");
+                    var priceValue = parseInt($(this).attr("price"));
                     var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
                     var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
                     $("#calories-left-1").text(afterCaloriesLeft);
-                    var beforeCaloriesConsumed = parseInt($("#user-calories-consumed").text());
+                    var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());
                     var afterCaloriesConsumed = beforeCaloriesConsumed + calorieValue;
-                    $("#calories-consumed").text(afterCaloriesConsumed);
+                    $("#user-calories-consumed-1").text(parseInt(afterCaloriesConsumed));
                     console.log(afterCaloriesLeft);
+                    console.log(afterCaloriesConsumed);
                     console.log(calorieValue);
                     console.log(priceValue);
+
+                    var itemName = $(this).attr("item");
+                    var price = $(this).attr("price");
+                    var itemNamediv = $("<div></div>");
+                    itemNamediv.append(itemName);
+                    itemNamediv.append($("<br>"));
+                    itemNamediv.append(price);
+                    $("#selected-item-display").append(itemNamediv);
 
                 })
 
