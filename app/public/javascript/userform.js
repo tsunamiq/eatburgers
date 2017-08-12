@@ -52,7 +52,7 @@ $(document).ready(function(){
                 console.log("===============")
                 console.log("succesful user db update")
                 localStorage.setItem("user_id", response.id);
-                 window.location = "/main";
+                 window.location.href = "/main";
             });
         }else{
             console.log("user info incorrect. try again.")
