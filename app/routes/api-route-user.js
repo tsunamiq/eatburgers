@@ -9,6 +9,8 @@ var calorieNeed = require("../modules/calorieNeedCalculator.js");
 // =============================================================
 
 module.exports = function(app) {
+
+
 //==============================================================
 //Post for adding new user
 //==============================================================
@@ -38,13 +40,16 @@ module.exports = function(app) {
       console.log("==================")
       console.log(data)
       calorieNeed(data.id,data.age, data.lifestyle,data.gender,data.weight_to_lose, data.weeks_to_lose);
-
+      res.json(data);
     })
 
 
   });
 
-  //Get method to collect all users data
+//==============================================================
+//Get method to collect all users data
+//==============================================================
+
    app.get("/api/users", function(req, res) {
     db.user.findAll({})
     .then(function(data) {
@@ -56,7 +61,9 @@ module.exports = function(app) {
     console.log("test user")
   });
 
-  // Get method to collect info on single user
+//==============================================================
+// Get method to collect info on single user
+//==============================================================
   app.get("/api/users/:login_name", function(req, res) {
     db.user.findOne({
       where: {
