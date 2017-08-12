@@ -11,7 +11,7 @@ function grabsUserData() {
         }
     })
 };
-//Attaches on-click events for the filtersS
+//Attaches on-click events for menu items
 
 function startMenuCall () {
         $.get({
@@ -21,7 +21,9 @@ function startMenuCall () {
             console.log(response);
             console.log(response[0].restaurant);
             for (i=0; i < 10; i++) {
-                console.log("A");
+
+                //Creates the display container and adds all the columns
+                //to contain the data for that entry/item
                 var restaurantDiv = $("<div></div>");
                 $(restaurantDiv).attr("class", "row");
                 $(restaurantDiv).attr("id", "results-display");
@@ -37,20 +39,25 @@ function startMenuCall () {
                 $(caloriesColumn).attr("class", "col s2");
                 var priceColumn = $("<div></div>");
                 $(priceColumn).attr("class", "col s2");
+                var locationColumn = $("<div></div>");
+                $(locationColumn).attr("class", "col s2");
 
-
+                //Writes the data into each column
                 $(restaurantColumn).text(response[i].restaurant);
                 $(itemColumn).text(response[i].item);
                 $(caloriesColumn).text(response[i].calories);
                 $(priceColumn).text(response[i].price);
+                $(locationColumn).text("6265 Greenwich Ave");
 
-
+                //Appends each column to the display container div
                 $(restaurantDiv).append(spacerColumn);
                 $(restaurantDiv).append(restaurantColumn);
                 $(restaurantDiv).append(itemColumn);
                 $(restaurantDiv).append(caloriesColumn);
                 $(restaurantDiv).append(priceColumn);
+                $(restaurantDiv).append(locationColumn);
                 
+                //Appends the display container div to the page container
                 $("#search-submit-shadow").append(restaurantDiv);
             }  
         });
