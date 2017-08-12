@@ -70,7 +70,9 @@ function startMenuCall () {
                     var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
                     var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
                     if (afterCaloriesLeft < 0) {
-                        alert("You have gone over your limit fatty!");
+                        var alertDiv = $("<div id='alertDiv'>That would put you over your calorie limit!</div>");
+                        $("body").append(alertDiv);
+                        setTimeout(function() {$("body").remove(alertDiv)}, 500)
                     } else {
                     $("#calories-left-1").text(afterCaloriesLeft);
                     var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());

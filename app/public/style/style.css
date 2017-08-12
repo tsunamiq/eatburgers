@@ -120,6 +120,19 @@ body {
 	color: white;
 }
 
+#alertDiv {
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	height: 100px;
+	width: 300px;
+	background: white;
+	color: red;
+	text-align: center;
+	line-height: 100px;
+	z-index: 5;
+}
+
 #consumption-sidebar {
 	position: absolute;
 	top: 10%;
