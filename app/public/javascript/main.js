@@ -21,10 +21,32 @@ function startMenuCall () {
                 var restaurantDiv = $("<div></div>");
                 $(restaurantDiv).attr("class", "row");
                 $(restaurantDiv).attr("id", "results-display");
-                var firstColumn = $("<div>dgdfg</div>");
-                $(firstColumn).attr("class", "col s1");
-                $(firstColumn).text(response[i].restaurant);
-                $(restaurantDiv).append(firstColumn);
+                var spacerColumn = $("<div></div>");
+                $(spacerColumn).attr("class", "col s1");
+                var restaurantColumn = $("<div></div>");
+                $(restaurantColumn).attr("class", "col s3");
+                var itemColumn = $("<div></div>");
+                $(itemColumn).attr("class", "col s2");
+                var priceColumn = $("<div></div>");
+                $(priceColumn).attr("class", "col s2");
+                var caloriesColumn = $("<div></div>");
+                $(caloriesColumn).attr("class", "col s2");
+                var priceColumn = $("<div></div>");
+                $(priceColumn).attr("class", "col s2");
+
+
+                $(restaurantColumn).text(response[i].restaurant);
+                $(itemColumn).text(response[i].item);
+                $(caloriesColumn).text(response[i].calories);
+                $(priceColumn).text(response[i].price);
+
+
+                $(restaurantDiv).append(spacerColumn);
+                $(restaurantDiv).append(restaurantColumn);
+                $(restaurantDiv).append(itemColumn);
+                $(restaurantDiv).append(caloriesColumn);
+                $(restaurantDiv).append(priceColumn);
+                
                 $("#search-submit-shadow").append(restaurantDiv);
             }  
         });
