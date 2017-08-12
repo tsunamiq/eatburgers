@@ -32,9 +32,7 @@ module.exports = function(app) {
     })
     .then(function(data) {
       res.json(data);
-    })
-
- 
+    });
   });
 
   // Get method to collect consumption info per day from a single user

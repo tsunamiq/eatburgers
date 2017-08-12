@@ -41,12 +41,6 @@ $(document).ready(function(){
                 console.log("login response:");
                 console.log(response.result)
             }
-
-
         });
-    
-
-
-      
     })
 });
