@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-     <!--  <link rel="stylesheet" href="index.css"> -->
-      <!-- Compiled and minified CSS -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+<!DOCTYPE HTML>
+<html>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger3 Home page</title>
+  <link href="textillate/assets/animate.css" rel="stylesheet">
+  <link href="textillate/assets/style.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
        
        
 
@@ -12,23 +17,64 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
-    </head>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <body>
+    <div class="decal"></div>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="glow in tlt">Burger3</h1>
+        <p class="tlt" data-in-effect="bounceInDown">
+          A simple yet fun way to lose weight!
+        </p>
+
+</div>
+
+</div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<script type="text/javascript" src="javascript/userform.js"></script>
+<script type="text/javascript" src="javascript/loginValidation.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="textillate/assets/jquery.fittext.js"></script>
+<script src="textillate/assets/jquery.lettering.js"></script>
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script src="textillate/jquery.textillate.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script>
+
+
+$(function () {
+  $('.tlt').textillate();
+})
+
+
+</script>
 <style>
 
 .signIN{
-	position: relative;
+  position: relative;
     right: -1000px;
     top: -20px;
 }
 
 .signUP{
-	position: relative;
-	top: -65px;
-	right: -50px;
+  position: relative;
+  top: -65px;
+  right: -50px;
 }
 
+
+ body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 
 
@@ -78,46 +124,6 @@
   </button>
 </div>
 
-
-
-
-<div class="carousel">
-    <a class="carousel-item" href="#one!" id="one"><img src="https://munchies-images.vice.com/wp_upload/how-to-matty-matheson-cheeseburger.jpg"></a>
-    <a class="carousel-item" href="#two!" id="two"><img src="http://www.kraftrecipes.com/-/media/assets/recipe_images/all-american-bbq-bacon-cheeseburgers-57447-580x250.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="http://ihopbonita.com/wp-content/uploads/2014/05/Cheeseburger1.png"></a>
-    <a class="carousel-item" href="#four!"><img src="https://i.redd.it/3r3e1jhbcxty.jpg"></a>
-    <a class="carousel-item" href="#five!"><img src="http://www.star-telegram.com/living/food-drink/6s6g9n/picture102262107/alternates/FREE_640/cheeseburger"></a>
-  </div>
-
-
-  
-
-  <!-- 
-  Modal for incorrect login -->
-  <div id="modallogin" class="modal">
-    <div class="modal-content">
-      <h4>Incorrect Login</h4>
-      <p>User  or password is incorrect. Please retry or create new account.</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-    </div>
-  </div>
-
-
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
-<script type="text/javascript" src="javascript/userform.js"></script>
-<script type="text/javascript" src="javascript/loginValidation.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.carousel').carousel();
-    
-});
-</script>
-
-
-
 </body>
+
 </html>

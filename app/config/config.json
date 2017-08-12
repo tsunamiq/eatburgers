@@ -1,7 +1,9 @@
 {
   "development": {
-    "username": "root",
+    "username": "root"
     "password": "root",
+    "password": "root",
+>>>>>>
     "database": "burger3_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
