@@ -20,7 +20,7 @@ function startMenuCall () {
         }).done(function(response) {
             console.log(response);
             console.log(response[0].restaurant);
-            for (i=0; i < 10; i++) {
+            for (i=0; i < 300; i = i +25) {
 
                 //Creates the display container and adds all the columns
                 //to contain the data for that entry/item
