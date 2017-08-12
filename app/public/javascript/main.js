@@ -1,11 +1,12 @@
 $(document).ready(function(){
 //Grabs user data and appends it to the page
 function grabsUserData() {
+      var user_id = parseInt(localStorage.getItem("user_id"));
     $.get({
         url: "/api/users/",
         method: "GET"
     }).done(function(response) {
-        var user_id = parseInt(localStorage.getItem("user_id"));
+      
         var userArrayIndex = 0;
 
         console.log("==================================================")
@@ -36,18 +37,19 @@ function grabsUserData() {
         var calorieNew = response[userArrayIndex].calorieNew;
         console.log("New Calories: " + calorieNew)
 
-        $("#calories-fixed-value").text(calorieNew);
-        // $("#calories-left-1").text(response[userArrayIndex].first_name);
-        // $("#user-calories-consumed-1").text(response[userArrayIndex].first_name);
-        
-    })
+        $("#calories-fixed-value").text(calorieNew).attr("value",calorieNew)
+        userConsumption();
+    });
 };
+
+
 
 
 
 //Attaches on-click events for menu items
 
 function startMenuCall () {
+        var user_id = parseInt(localStorage.getItem("user_id"));
         $.get({
             url: "/api/restaurant",
             method: "GET"
@@ -125,7 +127,7 @@ function startMenuCall () {
 
 
                     var consumption = {
-                    user_id: 1,
+                    user_id: user_id,
                     food_name: itemName,
                     calorie: calorieValue,
                     cost: priceValue 
@@ -133,7 +135,17 @@ function startMenuCall () {
                 
                     storeMealatConsumptionAPI(consumption);
                     }
-                })
+
+                    userConsumption();
+                    // DISPLAY CONSUMPTION
+
+                
+
+        
+
+
+    })
+             
 
                 //Appends the display container div to the page container
                 $("#search-submit-shadow").append(restaurantDiv);
@@ -146,7 +158,29 @@ function startMenuCall () {
 
 
 
+function userConsumption(){
+    var user_id = parseInt(localStorage.getItem("user_id"));
+        $.get({
+            url: "/api/consumption/all/"+user_id,
+            method: "GET"
+        }).done(function(response) {
 
+            console.log("==========================================");
+            console.log("user Id: " + user_id)
+            console.log("user consumption:");
+            console.log(response);
+            console.log("==========================================");
+            var calorieSum = 0;
+            for(var i = 0; i<response.length ; i++){
+                calorieSum = calorieSum + response[0].calorie;
+            }
+            var caloriesLeft = parseInt($("#calories-fixed-value").attr("value"))-calorieSum;
+
+            console.log("calories left: " + caloriesLeft);
+            $("#user-calories-consumed-1").text(calorieSum);
+            $("#calories-left-1").text(caloriesLeft);
+        })
+}
 
 
 function storeMealatConsumptionAPI (consumption) {
