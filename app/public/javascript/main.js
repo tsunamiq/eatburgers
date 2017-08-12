@@ -69,6 +69,9 @@ function startMenuCall () {
                     var priceValue = parseInt($(this).attr("price"));
                     var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
                     var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
+                    if (afterCaloriesLeft < 0) {
+                        alert("You have gone over your limit fatty!");
+                    } else {
                     $("#calories-left-1").text(afterCaloriesLeft);
                     var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());
                     var afterCaloriesConsumed = beforeCaloriesConsumed + calorieValue;
@@ -91,6 +94,7 @@ function startMenuCall () {
                     }
                 
                     storeMealatConsumptionAPI(consumption);
+                    }
                 })
 
                 //Appends the display container div to the page container
