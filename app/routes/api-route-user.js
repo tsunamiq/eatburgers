@@ -1,6 +1,7 @@
 
 var db = require("../models");
 var calorieNeed = require("../modules/calorieNeedCalculator.js");
+  var signInValidation = require("../modules/signInValidation.js");
 
 // =============================================================
 // Routes for user information.
@@ -68,6 +69,18 @@ module.exports = function(app) {
     });
   });
 
+//==============================================================
+//Post to validate user login
+//==============================================================
+  app.post("/api/user/login", function(req, res) {
+    console.log("user login object")
+    console.log(req.body);
+
+    signInValidation(req.body.username,req.body.password,function(loginResult){
+      console.log("login accepted: " + loginResult)
+      res.json(loginResult)
+    })
+  });
 
 };
 

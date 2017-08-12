@@ -15,7 +15,7 @@ var db = require("../models");
 		var calorieDef = (pounds * 3500) / (7 * weeks); 
 		var calorieData = {};
 		var lifestyle_gender = lifestyle+"_"+gender;
-		console.log(lifestyle_gender)
+		console.log("lifestyle data from calculator" +lifestyle_gender)
 		db.calorie_chart.findAll({
 			where: {
 				age:age
