@@ -73,10 +73,6 @@ function startMenuCall () {
                     var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());
                     var afterCaloriesConsumed = beforeCaloriesConsumed + calorieValue;
                     $("#user-calories-consumed-1").text(parseInt(afterCaloriesConsumed));
-                    console.log(afterCaloriesLeft);
-                    console.log(afterCaloriesConsumed);
-                    console.log(calorieValue);
-                    console.log(priceValue);
 
                     var itemName = $(this).attr("item");
                     var price = $(this).attr("price");
@@ -86,6 +82,15 @@ function startMenuCall () {
                     itemNamediv.append(price);
                     $("#selected-item-display").append(itemNamediv);
 
+
+                    var consumption = {
+                    user_id: 1,
+                    food_name: itemName,
+                    calorie: calorieValue,
+                    cost: priceValue 
+                    }
+                
+                    storeMealatConsumptionAPI(consumption);
                 })
 
                 //Appends the display container div to the page container
@@ -93,6 +98,13 @@ function startMenuCall () {
             }  
         });
     };
+
+function storeMealatConsumptionAPI (consumption) {
+    $.post("/api/consumption/add", consumption)
+        .done(function(data) {
+            console.log(data);
+            });
+        };
 
 $(document).ready(function(){
         startMenuCall();
