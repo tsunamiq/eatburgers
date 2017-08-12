@@ -47,7 +47,7 @@ function startMenuCall () {
         }).done(function(response) {
             console.log(response);
             console.log(response[0].restaurant);
-            for (i=0; i < 10; i++) {
+            for (i=0; i < 300; i = i +25) {
 
                 //Creates the display container and adds all the columns
                 //to contain the data for that entry/item
@@ -96,14 +96,17 @@ function startMenuCall () {
                     var priceValue = parseInt($(this).attr("price"));
                     var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
                     var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
-                    // $("#calories-left-1").text(afterCaloriesLeft);
+
+                    if (afterCaloriesLeft < 0) {
+                        var alertDiv = $("<div id='alertDiv'>That would put you over your calorie limit!</div>");
+                        $("body").append(alertDiv);
+                        setTimeout(function() {$("body").remove(alertDiv)}, 500)
+                    } else {
+                    $("#calories-left-1").text(afterCaloriesLeft);
                     var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());
                     var afterCaloriesConsumed = beforeCaloriesConsumed + calorieValue;
-                    // $("#user-calories-consumed-1").text(parseInt(afterCaloriesConsumed));
-                    console.log(afterCaloriesLeft);
-                    console.log(afterCaloriesConsumed);
-                    console.log(calorieValue);
-                    console.log(priceValue);
+                    $("#user-calories-consumed-1").text(parseInt(afterCaloriesConsumed));
+
 
                     var itemName = $(this).attr("item");
                     var price = $(this).attr("price");
@@ -113,6 +116,16 @@ function startMenuCall () {
                     itemNamediv.append(price);
                     $("#selected-item-display").append(itemNamediv);
 
+
+                    var consumption = {
+                    user_id: 1,
+                    food_name: itemName,
+                    calorie: calorieValue,
+                    cost: priceValue 
+                    }
+                
+                    storeMealatConsumptionAPI(consumption);
+                    }
                 })
 
                 //Appends the display container div to the page container
@@ -125,6 +138,16 @@ function startMenuCall () {
 
 
 
+
+
+
+
+function storeMealatConsumptionAPI (consumption) {
+    $.post("/api/consumption/add", consumption)
+        .done(function(data) {
+            console.log(data);
+            });
+        };
 
 
 
