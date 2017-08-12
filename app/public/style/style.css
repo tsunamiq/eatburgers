@@ -122,15 +122,17 @@ body {
 
 #alertDiv {
 	position: fixed;
-	top: 20%;
+	top: 30%;
 	left: 30%;
-	height: 100px;
-	width: 300px;
+	height: 200px;
+	width: 500px;
 	background: white;
 	color: red;
 	text-align: center;
 	line-height: 100px;
 	z-index: 5;
+	font-size: 20px;
+	border: 2px solid red;
 }
 
 #consumption-sidebar {

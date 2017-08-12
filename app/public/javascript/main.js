@@ -70,9 +70,9 @@ function startMenuCall () {
                     var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
                     var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
                     if (afterCaloriesLeft < 0) {
-                        var alertDiv = $("<div id='alertDiv'>That would put you over your calorie limit!</div>");
+                        var alertDiv = $("<div id='alertDiv'>That would put you over your calorie limit! Ahhh!!! Learn some self-control!!!!</div>");
                         $("body").append(alertDiv);
-                        setTimeout(function() {$("body").remove(alertDiv)}, 500)
+                        setTimeout(function() {$(alertDiv).css("visibility", "hidden")}, 2000)
                     } else {
                     $("#calories-left-1").text(afterCaloriesLeft);
                     var beforeCaloriesConsumed = parseInt($("#user-calories-consumed-1").text());
