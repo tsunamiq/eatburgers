@@ -1,6 +1,7 @@
 
 var db = require("../models");
 var calorieNeed = require("../modules/calorieNeedCalculator.js");
+  var signInValidation = require("../modules/signInValidation.js");
 
 // =============================================================
 // Routes for user information.
@@ -8,6 +9,8 @@ var calorieNeed = require("../modules/calorieNeedCalculator.js");
 // =============================================================
 
 module.exports = function(app) {
+
+
 //==============================================================
 //Post for adding new user
 //==============================================================
@@ -37,13 +40,16 @@ module.exports = function(app) {
       console.log("==================")
       console.log(data)
       calorieNeed(data.id,data.age, data.lifestyle,data.gender,data.weight_to_lose, data.weeks_to_lose);
-
+      res.json(data);
     })
 
 
   });
 
-  //Get method to collect all users data
+//==============================================================
+//Get method to collect all users data
+//==============================================================
+
    app.get("/api/users", function(req, res) {
     db.user.findAll({})
     .then(function(data) {
@@ -55,7 +61,9 @@ module.exports = function(app) {
     console.log("test user")
   });
 
-  // Get method to collect info on single user
+//==============================================================
+// Get method to collect info on single user
+//==============================================================
   app.get("/api/users/:login_name", function(req, res) {
     db.user.findOne({
       where: {
@@ -68,6 +76,18 @@ module.exports = function(app) {
     });
   });
 
+//==============================================================
+//Post to validate user login
+//==============================================================
+  app.post("/api/user/login", function(req, res) {
+    console.log("user login object")
+    console.log(req.body);
+
+    signInValidation(req.body.username,req.body.password,function(loginResult){
+      console.log("login accepted: " + loginResult)
+      res.json(loginResult)
+    })
+  });
 
 };
 

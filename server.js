@@ -27,6 +27,7 @@ require("./app/routes/html-routes.js")(app);
 //Importing Api routes
 require("./app/routes/api-route-user.js")(app);
 require("./app/routes/api-route-consumption.js")(app);
+require("./app/routes/api-restaurant.js")(app);
 
 
 
@@ -35,7 +36,7 @@ require("./app/routes/api-route-consumption.js")(app);
 var db = require("./app/models");
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

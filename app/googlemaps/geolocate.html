@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.1/geolocator.min.js"></script>
+<script type="text/javascript">
+ 
+    geolocator.config({
+        language: "en",
+        google: {
+            version: "3",
+            key: "AIzaSyAvz2Zzh4aaUYWu3PbKUgO3zxLueYc0_jk"
+        }
+    });
+ 
+    window.onload = function () {
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumWait: 10000,     // max wait time for desired accuracy 
+            maximumAge: 0,          // disable cache 
+            desiredAccuracy: 30,    // meters 
+            fallbackToIP: true,     // fallback to IP if Geolocation fails or rejected 
+            addressLookup: true,    // requires Google API key if true 
+            timezone: true,         // requires Google API key if true 
+            map: "map-canvas",      // interactive map element id (or options object) 
+            staticMap: true         // map image URL (boolean or options object) 
+        };
+        geolocator.locate(options, function (err, location) {
+            if (err) return console.log(err);
+            console.log(location);
+        });
+    };
+ 
+</script> 
+  </head>
+
+  <body>
+  </body>
+  </html>

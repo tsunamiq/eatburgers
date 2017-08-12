@@ -46,8 +46,13 @@ $(document).ready(function(){
         var confirm = $(this).attr("value");
         console.log("confirm value: "+ confirm);
         if(confirm == "true"){
-            $.post("/api/user",user).done(function() {
+            $.post("/api/user",user).done(function(response) {
+                console.log("response from user creationg post:");
+                console.log(response);
+                console.log("===============")
                 console.log("succesful user db update")
+                localStorage.setItem("user_id", response.id);
+                 window.location = "/main";
             });
         }else{
             console.log("user info incorrect. try again.")

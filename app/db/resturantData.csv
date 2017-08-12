@@ -1,0 +1,353 @@
+1,mcdonalds,'Hamburger', 'burger',1,250,70,13,480
+2,mcdonalds,'Cheeseburger', 'burger',1,300,100,15,680
+3,mcdonalds,'Double Cheeseburger', 'burger',1,430,190,25,1040
+4,mcdonalds,'McDouble', 'burger',1,380,160,23,840
+5,mcdonalds,'Quarter Pounder with Cheese', 'burger',1,530,240,31,1090
+6,mcdonalds,'Double Quarter Pounder with Cheese', 'burger',1,770,400,51,1290
+7,mcdonalds,'Big Mac', 'burger',1,540,250,25,950
+8,mcdonalds,'Sweet BBQ Bacon 1/4 lb', 'burger',1,700,340,38,1310
+9,mcdonalds,'Pico Guacamole 1/4 lb', 'burger',1,580,300,29,920
+10,mcdonalds,'Signature Sriracha 1/4 lb burger', 'burger',1,670,320,32,1010
+11,mcdonalds,'McChicken', 'chickenS',1,350,130,15,600
+12,mcdonalds,'Buttermilk Crispy Chicken Sandwich', 'chickenS',1,570,200,28,1050
+13,mcdonalds,'Artisan Grilled Chicken Sandwich', 'chickenS',1,380,60,36,1110
+14,mcdonalds,'Pico Guacamole with Buttermilk Crispy Chicken', 'chickenS',1,680,280,31,1430
+15,mcdonalds,'Pico Guacamole with Artisan Grilled Chicken', 'chickenS',1,520,160,40,1540
+16,mcdonalds,'Sweet BBQ Bacon with Buttermilk Crispy Chicken', 'chickenS',1,810,330,40,1820
+17,mcdonalds,'Sweet BBQ Bacon with Artisan Grilled Chicken', 'chickenS',1,640,200,49,1940
+18,mcdonalds,'Signature Sriracha Buttermilk Crispy Chicken Sandwich', 'chickenS',1,730,300,32,1430
+19,mcdonalds,'Signature Sriracha Artisan Grilled Chicken Sandwich', 'chickenS',1,560,180,41,1550
+20,mcdonalds,'Filet O Fish', 'fishS',1,410,180,18,660
+21,mcdonalds,'4 pc Chicken McNuggets', 'chicken',1,180,100,10,340
+22,mcdonalds,'6 pc Chicken McNuggets', 'chicken',1,270,140,15,510
+23,mcdonalds,'10 pc Chicken McNuggets', 'chicken',1,440,240,24,840
+24,mcdonalds,'20 pc Chicken McNuggets', 'chicken',1,890,480,49,1680
+25,mcdonalds,'40 pc Chicken McNuggets', 'chicken',1,1770,960,98,3370
+26,mcdonalds,'Egg McMuffin', 'breakfast',1,300,110,18,730
+27,mcdonalds,'Egg White Delight McMuffin', 'breakfast',1,260,70,16,750
+28,mcdonalds,'Sausage McMuffin', 'breakfast',1,400,230,14,740
+29,mcdonalds,'Sausage McMuffin with Egg', 'breakfast',1,470,270,21,810
+30,mcdonalds,'Bacon Egg and Cheese Biscuit', 'breakfast',1,450,220,18,1290
+31,mcdonalds,'Sausage Biscuit', 'breakfast',1,460,270,11,1050
+32,mcdonalds,'Sausage Biscuit with Egg', 'breakfast',1,530,310,17,1140
+33,mcdonalds,'Steak Egg and Cheese Biscuit', 'breakfast',1,530,270,25,1490
+34,mcdonalds,'Bacon Egg ang Cheese McGriddles', 'breakfast',1,420,160,18,1230
+35,mcdonalds,'Sausage McGriddles', 'breakfast',1,430,220,11,990
+36,mcdonalds,'Sausage Egg and Cheese McGriddles', 'breakfast',1,550,290,20,1280
+37,mcdonalds,'Bacon Egg and Cheese Bagel', 'breakfast',1,550,220,26,1260
+38,mcdonalds,'Big Breakfast', 'breakfast',1,750,440,25,1490
+39,mcdonalds,'Big Breakfast with Hotcakes', 'breakfast',1,1350,590,35,2100
+40,mcdonalds,'Hotcakes', 'breakfast',1,600,150,9,610
+41,mcdonalds,'Hotcakes with Sausage', 'breakfast',1,790,310,16,890
+42,mcdonalds,'Sausage Burrito', 'breakfast',1,290,140,13,800
+43,mcdonalds,'Hash Browns', 'breakfast',1,150,80,1,320
+44,mcdonalds,'Fruit and Maple Oatmeal', 'breakfast',1,310,35,6,140
+45,mcdonalds,'World Famous Fries Small', 'side',1,230,100,3,160
+46,mcdonalds,'World Famous Fries Medium', 'side',1,340,140,4,230
+47,mcdonalds,'World Famous Fries Large', 'side',1,510,220,7,350
+48,burger_king,'Whopper', 'burger',1,630,340,26,810
+49,burger_king,'Whopper with Cheese', 'burger',1,710,400,30,1160
+50,burger_king,'Bacon and Cheese Whopper', 'burger',1,750,440,33,1260
+51,burger_king,'Double Whopper', 'burger',1,850,480,43,870
+52,burger_king,'Double Whopper with Cheese', 'burger',1,930,540,48,1230
+53,burger_king,'Whopper Jr', 'burger',1,310,160,13,390
+54,burger_king,'Double Bacon King', 'burger',1,1040,630,57,1900
+55,burger_king,'Homestyle Cheeseburger', 'burger',1,550,250,30,1140
+56,burger_king,'Hamburger', 'burger',1,220,80,11,380
+57,burger_king,'Cheeseburger', 'burger',1,270,110,13,560
+58,burger_king,'Double Hamburger', 'burger',1,310,130,18,400
+59,burger_king,'Double Cheeseburger', 'burger',1,350,160,20,580
+60,burger_king,'Extra Long Cheeseburger', 'burger',1,590,310,26,1040
+61,burger_king,'Bacon Cheeseburger', 'burger',1,300,130,15,710
+62,burger_king,'Bacon Double Cheeseburger', 'burger',1,370,180,21,660
+63,burger_king,'Double Cheeseburger', 'burger',1,350,160,20,580
+64,burger_king,'Bacon Cheeseburger Deluxe', 'burger',1,290,120,14,640
+65,burger_king,'Rodeo Burger', 'burger',1,310,110,12,440
+66,burger_king,'Classic Grilled Dog', 'hotdog',1,310,140,11,960
+67,burger_king,'Chili Cheese Grilled Dog', 'hotdog',1,330,170,14,980
+68,burger_king,'Rodeo Crispy Chicken Sandwich', 'chickenS',1,410,150,12,870
+69,burger_king,'Grilled Chicken Sandwich', 'chickenS',1,470,170,37,840
+70,burger_king,'Crispy Chicken Sandwich', 'chickenS',1,670,370,23,1080
+71,burger_king,'Original Chicken Sandwich', 'chickenS',1,660,360,28,1170
+72,burger_king,'Crispy Chicken Jr', 'chickenS',1,450,270,12,780
+73,burger_king,'Spicy Crispy Chicken Jr', 'chickenS',1,390,190,12,740
+74,burger_king,'Chicken Nuggets 4pc', 'chicken',1,170,100,8,310
+75,burger_king,'Chicken Nuggets 6pc', 'chicken',1,260,150,12,470
+76,burger_king,'Chicken Nuggets 10pc', 'chicken',1,430,240,20,780
+77,burger_king,'Chicken Nugget 20pc', 'chicken',1,860,490,39,1570
+78,burger_king,'Chicken Fries 9pc', 'chicken',1,280,150,13,850
+79,burger_king,'Jalapeno Chicken Fries', 'chicken',1,300,160,15,950
+80,burger_king,'BIG FISH Sandwich', 'fishS',1,510,250,16,1180
+81,burger_king,'BK Veggie Burger', 'burger',1,390,140,22,1060
+82,burger_king,'Sausage Egg Cheese and Hash Brown Burrito', 'breakfast',1,370,210,15,930
+83,burger_king,'Egg-NORMOUS Burrito', 'breakfast',1,910,490,33,2020
+84,burger_king,'Supreme Breakfast Sandwich', 'breakfast',1,880,530,41,2170
+85,burger_king,'BK Ultimate Breakfast Platter', 'breakfast',1,1190,590,27,2460
+86,burger_king,'Pancake Sausage Platter', 'breakfast',1,510,280,12,1010
+87,burger_king,'CROISSANWICH Egg and Cheese', 'breakfast',1,300,140,11,580
+88,burger_king,'CROISSANWICH Sausage Egg and Cheese', 'breaklfast',1,470,270,18,890
+89,burger_king,'CROISSANWICH Ham Egg and Cheese', 'breakfast',1,330,140,16,1000
+90,burger_king,'CROISSANWICH Bacon Egg and Cheese', 'breakfast',1,340,160,12,730
+91,burger_king,'Fully Loaded CROISSANWICH', 'breakfast',1,610,360,28,1680
+92,burger_king,'King CROISSANWICH with Double Sausage', 'breakfast',1,700,460,27,1410
+93,burger_king,'King CROISSANWICH with Sausage and Bacon', 'breakfast',1,580,350,24,1370
+94,burger_king,'King CROISSANWICH with Ham and Sausage', 'breakfast',1,530,310,23,1280
+95,burger_king,'Sausage Biscuit', 'breakfast',1,390,230,12,1020
+96,burger_king,'Ham Egg and Cheese Biscuit', 'breakfast',1,370,190,16,1500
+97,burger_king,'Sausage Egg and Cheese Biscuit', 'breakfast',1,510,310,18,1390
+98,burger_king,'Bacon Egg and Cheese Biscuit', 'breakfast',1,380,200,13,1390
+99,burger_king,'Hash Browns Small', 'breakfast',1,250,150,2,580
+100,burger_king,'Hash Browns Medium', 'breakfast',1,500,290,4,1140
+101,burger_king,'Hash Brown Large', 'breakfast',1,670,390,5,1530
+102,burger_king,'French Toast Sticks 3pc', 'breakfast',1,230,100,3,260
+103,burger_king,'French Toast Sticks 5pc', 'breakfast',1,380,160,5,430
+104,burger_king,'Onion Rings Value', 'side',1,150,70,1,400
+105,burger_king,'Onion Rings Small', 'side',1,320,150,3,840
+106,burger_king,'Onion Rings Medium', 'side',1,410,190,4,1080
+107,burger_king,'Onion Rings Large', 'side',1,500,230,5,1310
+108,burger_king,'Cheesy Tots', 'side',1,310,140,9,780
+109,burger_king,'French Fries Value', 'side',1,220,90,3,330
+110,burger_king,'French Fries Small', 'side',1,320,130,4,480
+111,burger_king,'French Fries Medium', 'side',1,380,150,5,570
+112,burger_king,'French Fries Large', 'side',1,430,170,6,640
+113,jack_box,'Bacon Ultimate Cheeseburger', 'burger',1,910,500,57,2190
+114,jack_box,'Big Cheeseburger', 'burger',1,560,270,29,1170
+115,jack_box,'Hamburger', 'burger',1,280,100,14,680
+116,jack_box,'Hamburger with Cheese', 'burger',1,320,130,16,880
+117,jack_box,'Jr Jack', 'burger',1,320,140,14,720
+118,jack_box,'Jr Jack with Cheese', 'burger',1,370,170,16,920
+119,jack_box,'Jr Bacon Cheeseburger', 'burger',1,390,180,19,960
+120,jack_box,'Jumbo Jack', 'burger',1,490,210,26,910
+121,jack_box,'Jumbo Jack with Cheese', 'burger',1,570,270,30,1310
+122,jack_box,'Sirloin Cheeseburger', 'burger',1,940,580,41,1990
+123,jack_box,'Sirloin Cheeseburger with Bacon', 'burger',1,1030,640,48,2400
+124,jack_box,'Sirloin Swiss and Grilled Onion Burger', 'burger',1,930,570,41,1670
+125,jack_box,'Sirloin Swiss and Grilled Onion Burger with Bacon', 'burger',1,1020,630,49,2080
+126,jack_box,'Sourdough Jack', 'burger',1,660,360,35,1450
+127,jack_box,'Sourdough Cheesesteak Melt', 'burger',1,450,220,23,1380
+128,jack_box,'Ultimate Cheeseburger', 'burger',1,820,440,50,1780
+129,jack_box,'Chicken Fajita Pita made with Whole Grain no Salsa', 'chickenS',1,320,100,24,870
+130,jack_box,'Chicken Fajita Pita made with Whole Grain with Salsa', 'chickenS',1,330,100,24,990
+131,jack_box,'Homestyle Ranch Chicken Club', 'chickenS',1,730,310,39,2010
+132,jack_box,'Jacks Spicy Chicken', 'chickenS',1,530,180,28,820
+133,jack_box,'Jacks Spicy Chicken with Cheese', 'chickenS',1,600,230,32,1110
+134,jack_box,'Sourdough Grilled Chicken Club', 'chickenS',1,540,230,39,1490
+135,jack_box,'Chicken Sandwich', 'chickenS',1,410,190,15,880
+136,jack_box,'Chicken Sandwich with Bacon', 'chickenS',1,470,220,21,1160
+137,jack_box,'Chicken Nuggets 5pc', 'chicken',1,240,150,9,600
+138,jack_box,'Chicken Nuggets 10pc', 'chicken',1,480,300,19,1210
+139,jack_box,'Chicken Nuggets 20pc', 'chicken',1,950,600,38,2420
+140,jack_box,'Chicken Strips Crispy', 'chicken',1,560,220,33,1580
+141,jack_box,'Chicken Strips Grilled', 'chicken',1,250,60,43,1070
+142,jack_box,'Fish Sandwich', 'fishS',1,390,140,17,890
+143,jack_box,'Bacon Breakfast Jack', 'breakfast',1,310,120,17,790
+144,jack_box,'Bacon Egg and Cheese Biscuit', 'breakfast',1,430,220,16,1060
+145,jack_box,'Breakfast Jack', 'breakfast',1,280,100,16,780
+146,jack_box,'Grilled Breakfast Sandwich', 'breakfast',1,620,260,36,1810
+147,jack_box,'Extreme Sausage Sandwich', 'breakfast',1,660,420,29,1360
+148,jack_box,'Hash Brown', 'breakfast',1,190,110,2,350
+149,jack_box,'Jumbo Breakfast Platter with Bacon', 'breakfast',1,560,280,24,1250
+150,jack_box,'Jumbo Breakfast Platter with Sausage', 'breakfast',1,640,360,23,1110
+151,jack_box,'Meaty Breakfast Burrito no Salsa', 'breakfast',1,610,340,33,1440
+152,jack_box,'Meaty Breakfast Burrito with Salsa', 'breakfast',1,620,340,33,1560
+153,jack_box,'Mini Pancakes', 'breakfast',1,140,15,4,350
+154,jack_box,'Sausage Biscuit', 'breakfast',1,450,260,11,850
+155,jack_box,'Sausage Breakfast Jack', 'breakfast',1,430,240,19,860
+156,jack_box,'Sausage Croissant', 'breakfast',1,560,350,19,760
+157,jack_box,'Sausage Egg and Cheese Biscuit', 'breakfast',1,560,340,19,1130
+158,jack_box,'Sourdough Breakfast Sandwich', 'breakfast',1,410,190,20,1010
+159,jack_box,'Steak and Egg Burrito no Salsa', 'breakfast',1,790,450,33,1580
+160,jack_box,'Steak and Egg Burrito with Salsa', 'breakfast',1,800,450,33,1700
+161,jack_box,'Spicy Chicken Biscuit', 'breakfast',1,540,230,25,980
+162,jack_box,'Supreme Croissant', 'breakfast',1,450,240,19,890
+163,jack_box,'Ultimate Breakfast Sandwich', 'breakfast',1,520,220,33,1590
+164,jack_box,'Bacon Cheddar Potato Wedges', 'side',1,600,370,17,1250
+165,jack_box,'Egg Roll 1pc', 'side',1,150,70,5,320
+166,jack_box,'Egg Roll 3pc', 'side',1,440,200,16,950
+167,jack_box,'French Fries Small', 'side',1,330,140,4,610
+168,jack_box,'French Fries Medium', 'side',1,450,190,5,820
+169,jack_box,'French Fries Large', 'side',1,610,250,7,1120
+170,jack_box,'Mozzarella Cheese Sticks 3pc', 'side',1,280,150,12,590
+171,jack_box,'Mozzarella Cheese Sticks 6pc', 'side',1,560,290,24,1190
+172,jack_box,'Onion Rings', 'side',1,450,250,6,620
+173,jack_box,'Seasoned Curly Fries Small', 'side',1,280,150,3,610
+174,jack_box,'Seasoned Curly Fries Medium', 'side',1,430,220,5,940
+175,jack_box,'Seasoned Curly Fries Large', 'side',1,580,300,7,1280
+176,jack_box,'Stuffed Jalapenos 3pc', 'side',1,220,110,6,730
+177,jack_box,'Stuffed Jalapenos 7pc', 'side',1,510,260,14,1690
+178,jack_box,'Taco', 'side',1,190,100,6,320
+179,in_n_out,'Hamburger with Onion', 'burger',1,390,170,16,650
+180,in_n_out,'Cheeseburger with Onion', 'burger',1,480,240,22,1000
+181,in_n_out,'Double Double with Onion', 'burger',1,670,370,37,1440
+182,in_n_out,'3x3 with Onion', 'burger',1,860,500,52,1880
+183,in_n_out,'4x4 with Onion', 'burger',1,1050,630,67,2320
+184,in_n_out,'French Fries', 'side',1,395,160,7,245
+185,wendys,'Jr Hamburger', 'burger',1,280,90,15,600
+186,wendys,'Jr Cheeseburger', 'burger',1,320,120,17,820
+187,wendys,'Jr Cheeseburger Deluxe', 'burger',1,360,170,18,880
+188,wendys,'Jr Bacon Cheeserburger', 'burger',1,380,200,20,810
+189,wendys,'Daves Single', 'burger',1,570,300,30,1210
+190,wendys,'Daves Double', 'burger',1,810,460,49,1460
+191,wendys,'Daves Triple', 'burger',1,1090,650,71,1910
+192,wendys,'Baconator', 'burger',1,950,560,59,1810
+193,wendys,'Son of Baconator', 'burger',1,630,350,34,1490
+194,wendys,'Double Stack', 'burger',1,390,190,25,910
+195,wendys,'Spicy Sriracha Chicken Sandwich', 'chickenS',1,670,310,39,1690
+196,wendys,'Asiago Ranch Chicken Club', 'chickenS',1,670,310,38,1490
+197,wendys,'Spicy Chicken Sandwich', 'chickenS',1,510,190,30,1110
+198,wendys,'Homestyle Chicken Sandwich', 'chickenS',1,520,200,29,1070
+199,wendys,'Grilled Chicken Sandwich', 'chickenS',1,360,80,35,820
+200,wendys,'Crispy Chicken Sandwich', 'chickenS',1,330,140,14,600
+201,wendys,'Spicy Chicken Wrap', 'chickenS',1,370,180,18,850
+202,wendys,'Grilled Chicken Wrap', 'chickenS',1,270,90,20,640
+203,wendys,'Crispy Chicken BLT', 'chickenS',1,420,210,20,950
+204,wendys,'4pc Chicken Nuggets', 'chicken',1,170,100,9,340
+205,wendys,'4pc Spicy Chicken Nuggets', 'chicken',1,190,100,9,480
+206,wendys,'6pc Chicken Nuggets', 'chicken',1,270,170,14,580
+207,wendys,'6pc Spicy Chicken Nuggets', 'chicken',1,280,160,14,720
+208,wendys,'10pc Chicken Nuggets', 'chicken',1,450,290,24,960
+209,wendys,'Artisan Egg Sandwich', 'breakfast',1,360,170,20,760
+210,wendys,'Mornin Melt Panini', 'breakfast',1,520,290,31,790
+211,wendys,'Honey Butter Chicken Biscuit', 'breakfast',1,510,220,21,1400
+212,wendys,'Steel Cut Oatmeal', 'breakfast',1,330,100,5,250
+213,wendys,'Sausage and Egg Burrito', 'breakfast',1,280,180,12,770
+214,wendys,'Sausage Biscuit', 'breakfast',1,460,260,12,1160
+215,wendys,'Seasoned Home Style Potatos', 'breakfast',1,150,40,2,480
+216,wendys,'Fresh Baked Biscuit', 'breakfast',1,570,330,21,1440
+217,wendys,'Bacon Ranch Fries', 'side',1,600,350,18,970
+218,wendys,'Bacon Sriracha Fries', 'side',1,590,350,14,790
+219,wendys,'Baconator Fries', 'side',1,490,260,14,550
+220,wendys,'Sour Cream and Chive Baked Potato', 'side',1,310,20,8,35
+221,wendys,'Broccoli Cheese Baked Potato', 'side',1,430,100,15,570
+222,wendys,'Bacon Cheese Baked Potato', 'side',1,480,150,17,780
+223,wendys,'Small Rich and Meaty Chili', 'side',1,170,45,15,780
+224,wendys,'Large Rich and Meaty Chili', 'side',1,250,60,23,1170
+225,wendys,'Value Natural Cut Fries', 'side',1,230,90,3,230
+226,wendys,'Small Natural Cut Fries', 'side',1,320,130,5,320
+227,wendys,'Medium Natural Cut Fries', 'side',1,420,170,6,420
+228,wendys,'Large Natural Cut Fries', 'side',1,530,220,7,520
+229,carls_jr,'Baby Back Rib Thickburger', 'burger',1,940,430,41,1400
+230,carls_jr,'Double Baby Back Rib Thickburger', 'burger',1,1140,560,58,1460
+231,carls_jr,'1/3 lb Baby Back Rib Thickburger', 'burger',1,1070,510,41,1990
+232,carls_jr,'Jalapeno Double Cheeseburger', 'burger',1,580,350,22,1200
+233,carls_jr,'Famous Star with Cheese', 'burger',1,670,330,28,1210
+234,carls_jr,'Super Star with Cheese', 'burger',1,920,510,48,1540
+235,carls_jr,'Western Bacon Cheeseburger', 'burger',1,750,320,36,1650
+236,carls_jr,'Double Western Bacon Cheeseburger', 'burger',1,1010,490,55,1980
+237,carls_jr,'Teriyaki Burger', 'burger',1,660,260,28,1270
+238,carls_jr,'The Big Carl', 'burger',1,920,520,47,1380
+239,carls_jr,'Grass Fed All Natural Burger', 'burger',1,700,360,30,1100
+240,carls_jr,'1/3 lb Original Six Dollar Thickburger', 'burger',1,780,430,47,1380
+241,carls_jr,'1/2 lb Original Six Dollar Thickburger', 'burger',1,980,580,46,2070
+242,carls_jr,'1/3 lb Guacamole Bacon Thickburger', 'burger',1,950,600,39,1810
+243,carls_jr,'1/2 lb Guacamole Bacon Thickburger', 'burger',1,1200,500,46,1990
+244,carls_jr,'1/2 lb Lettuce Wrapped Thickburger', 'burger',1,630,450,39,1630
+245,carls_jr,'1/3 Lettuce Wrapped Thickburger', 'burger',1,420,300,25,1060
+246,carls_jr,'California Classic Double Cheeseburger', 'burger',1,600,350,23,1100
+247,carls_jr,'Big Hamburger', 'burger',1,480,160,25,870
+248,carls_jr,'Big Chicken Fillet Sandwich', 'chickenS',1,650,290,33,1330
+249,carls_jr,'Bacon Swiss Crispy Chicken Fillet Sandwich', 'chickenS',1,770,360,42,1980
+250,carls_jr,'Charbroiled Chicken Club Sandwich', 'chickenS',1,580,260,36,1290
+251,carls_jr,'Charbroiled Sante Fe Chicken Sandwich', 'chickenS',1,560,250,33,1290
+252,carls_jr,'Charbroiled BBQ Chicken Sandwich', 'chickenS',1,390,70,30,990
+253,carls_jr,'Charbroiled Hawaiian Chicken Sandwich', 'chickenS',1,530,200,30,15300
+254,carls_jr,'3pc Hand Breaded Chicken Tenders', 'chicken',1,260,110,25,770
+255,carls_jr,'5pc Hand Breaded Chicken Tenders', 'chicken',1,440,190,41,1290
+256,carls_jr,'Sausage Egg and Cheese Biscuit', 'breakfast',1,610,380,20,1380
+257,carls_jr,'Bacon Egg and Cheese Biscuit', 'breakfast',1,480,260,18,1250
+258,carls_jr,'Monster Biscuit', 'breakfast',1,820,530,32,1930
+259,carls_jr,'Biscuit N Gravy', 'breakfast',1,450,220,9,1320
+260,carls_jr,'Steak and Egg Burrito', 'breakfast',1,630,330,35,1570
+261,carls_jr,'Sausage Grilled Cheese Breakfast Sandwich', 'breakfast',1,660,390,34,1460
+262,carls_jr,'Bacon Grilled Cheese Breakfast Sandwich', 'breakfast',1,550,280,34,1410
+263,carls_jr,'Ham Grilled Cheese Breakfast Sandwich', 'breakfast',1,500,230,34,1610
+264,carls_jr,'Loaded Breakfast Burrito', 'breakfast',1,760,430,33,1330
+265,carls_jr,'Big Country Breakfast Burrito', 'breakfast',1,660,360,26,1140
+266,carls_jr,'Bacon and Egg Burrito', 'breakfast',1,570,30,29,1000
+267,carls_jr,'Breakfast Burger', 'breakfast',1,730,390,37,1290
+268,carls_jr,'Hash Rounds Small', 'breakfast',1,350,210,3,440
+269,carls_jr,'Hash Rounds Medium', 'breakfast',1,390,230,3,490
+270,carls_jr,'Hash Rounds Large', 'breakfast',1,560,330,5,710
+271,carls_jr,'Jalapeno Poppers', 'side',1,370,170,9,1110
+272,carls_jr,'Natural Cut French Fries Small', 'side',1,300,310,3,600
+273,carls_jr,'Natural Cut French Fries Medium', 'side',1,430,190,5,860
+274,carls_jr,'Natural Cut French Fries Large', 'side',1,460,200,5,920
+275,carls_jr,'Crisscut Fries', 'side',1,450,260,5,900
+276,carls_jr,'Onion Rings', 'side',1,530,250,8,590
+277,carls_jr,'Fried Zucchini', 'side',1,330,160,6,610
+278,rallys,'Rally Burger', 'burger',1,320,110,15,940
+279,rallys,'Rally Burger with Cheese', 'burger',1,360,140,18,1140
+280,rallys,'All American Cheeseburger', 'burger',1,360,140,17,1160
+281,rallys,'All American Hamburger', 'burger',1,310,100,15,940
+282,rallys,'Bacon All American Cheeseburger', 'burger',1,430,190,21,1590
+283,rallys,'Baconzilla Burger', 'burger',1,810,470,46,2000
+284,rallys,'Steakzilla Burger', 'burger',1,970,590,51,1960
+285,rallys,'Roadhouse Burger', 'burger',1,670,360,29,1710
+286,rallys,'Bacon Roadhouse Burger', 'burger',1,680,420,29,1660
+287,rallys,'Bacon Cheddar Crisp Burger', 'burger',1,390,150,20,1160
+288,rallys,'Bacon Crispy Cheese Double Burger', 'burger',1,790,480,32,1530
+289,rallys,'Bacon Rallyburger with Cheese', 'burger',1,440,190,21,1310
+290,rallys,'Big Buford', 'burger',1,660,350,38,1730
+291,rallys,'BBQ Bacon Buford', 'burger',1,890,500,42,2060
+292,rallys,'Texas Bacon Buford Burger', 'burger',1,840,500,42,1970
+293,rallys,'Buttery Steak Burger', 'burger',1,690,420,24,1300
+294,rallys,'Buttery Steak and Bacon Burger', 'burger',1,760,470,28,1470
+295,rallys,'Cheddar Burger', 'burger',1,310,110,15,500
+296,rallys,'Cheese Double Burger', 'burger',1,480,220,27,1510
+297,rallys,'Cheese Double Cheese Burger', 'burger',1,530,260,29,1190
+298,rallys,'Cheese Champ', 'burger',1,430,190,22,1430
+299,rallys,'Chili Cheeseburger', 'burger',1,340,130,17,660
+300,rallys,'Mushroom Swissburger', 'burger',1,350,140,18,1330
+301,rallys,'Double Mushroom Swissburger', 'burger',1,470,220,28,1420
+302,rallys,'Olive Burger', 'burger',1,370,150,15,1580
+303,rallys,'Double Olive Burger', 'burger',1,500,240,25,1700
+304,rallys,'Double BBQ Bacon Cheeseburger', 'burger',1,650,360,31,1780
+305,rallys,'Double Fry Lovers Burger', 'burger',1,670,350,28,1780
+306,rallys,'Fry Lovers Burger', 'burger',1,440,180,18,1350
+307,rallys,'Fry Lovers Bacon Double Burger ', 'burger',1,740,410,32,1940
+308,rallys,'Double Checkerburger with Cheese', 'burger',1,490,220,27,1510
+309,rallys,'Grilled Chicken Sandwich', 'chickenS',1,460,210,30,1370
+310,rallys,'Rotisserie Grilled Chicken Sandwich', 'chickenS',1,310,30,32,1350
+311,rallys,'Double Spicy Chicken Sandwich', 'chickenS',1,550,260,27,1560
+312,rallys,'Crispy Chicken Fillet', 'chickenS',1,350,100,21,810
+313,rallys,'Big Chicken Sandwich', 'chickenS',1,410,160,16,970
+314,rallys,'Spicy Chicken Sandwich', 'chickenS',1,340,120,15,840
+315,rallys,'Spicy Chicken Deluxe Sandwich', 'chickenS',1,390,150,17,1050
+316,rallys,'Big Chicken Deluxe Sandwich', 'chickenS',1,460,200,18,1190
+317,rallys,'Bacon Crispy Cheese Chicken Sandwich', 'chickenS',1,770,460,22,1810
+318,rallys,'Angry Buffalo Chicken Wings 5pc', 'chicken',1,360,210,35,1530
+319,rallys,'Angry Buffalo Chicken Wings 10pc', 'chicken',1,710,410,69,3030
+320,rallys,'Angry Buffalo Chicken Wings 20pc', 'chicken',1,1420,820,137,6070
+321,rallys,'Asian Kick Chicken Wings 5pc', 'chicken',1,430,200,35,1210
+322,rallys,'Asian Kick Chicken Wings 10pc', 'chicken',1,840,400,69,2390
+323,rallys,'Asian Kick Chicken Wings 20pc', 'chicken',1,1680,800,138,4780
+324,rallys,'Garlic Parmesan Chicken Wings 5pc', 'chicken',1,510,360,35,1080
+325,rallys,'Garlic Parmesan Chicken Wings 10pc', 'chicken',1,1010,710,69,2150
+326,rallys,'Garlic Parmesan Chicken Wings 20pc', 'chicken',1,2030,1420,139,4290
+327,rallys,'Medium Buffalo Chicken Wings 5pc', 'chicken',1,360,210,35,1630
+328,rallys,'Medium Buffalo Chicken Wings 10pc', 'chicken',1,700,410,69,3240
+329,rallys,'Medium Buffalo Chicken Wings 20pc', 'chicken',1,1410,820,137,6490
+330,rallys,'Plain Chicken Wings 5pc', 'chicken',1,350,200,35,760
+331,rallys,'Plain Chicken Wings 10pc', 'chicken',1,690,400,68,1500
+332,rallys,'Plain Chicken Wings 20pc', 'chicken',1,1380,800,136,3000
+333,rallys,'Chicken Nuggets 5pc', 'chicken',1,250,140,12,580
+334,rallys,'Honey BBQ Chicken Wings 5pc', 'chicken',1,430,200,35,1050
+335,rallys,'Honey BBQ Chicken Wings 10pc', 'chicken',1,840,400,69,2080
+336,rallys,'Honey BBQ Chicken Wings 20pc', 'chicken',1,1690,800,138,4150
+337,rallys,'Crispy Fish Sandwich', 'fishS',1,530,260,15,760
+338,rallys,'Deep Sea Double Sandwich', 'fishS',1,570,290,17,980
+339,rallys,'Hot Dog', 'hotdog',1,360,180,13,940
+340,rallys,'Chili Dog', 'hotdog',1,390,200,15,1100
+341,rallys,'Chili Cheese Dog', 'hotdog',1,410,210,15,1180
+342,rallys,'Bowl of Chili 8oz', 'side',1,250,120,15,1200
+343,rallys,'Bowl of Chili 12oz', 'side',1,380,180,23,1800
+344,rallys,'Bowl of Chili with Cheese 8oz', 'side',1,270,130,16,1290
+345,rallys,'Bowl of Chili with Cheese 12oz', 'side',1,430,220,24,2060
+346,rallys,'Chili Cheese Fries', 'side',1,590,270,9,1450
+347,rallys,'Fries Value', 'side',1,260,110,3,580
+348,rallys,'Fries Small', 'side',1,390,170,5,870
+349,rallys,'Fries Medium', 'side',1,500,220,7,1110
+350,rallys,'Fries Large', 'side',1,590,260,8,1310
+351,rallys,'Fries Extra Large', 'side',1,910,400,12,2030
+352,rallys,'Fully Loaded Fries', 'side',1,870,510,19,2190
+353,rallys,'Onion Rings', 'side',1,720,370,10,2070
