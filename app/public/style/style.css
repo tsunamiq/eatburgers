@@ -144,6 +144,8 @@ body {
 	height: 70%;
 	width: 10%;
 	color: white;
+	border-radius: 10px;
+	text-align: center;
 }
 
 #home-prompt-2 {
