@@ -5,7 +5,7 @@ function grabsUserData() {
         url: "/api/users/",
         method: "GET"
     }).done(function(response) {
-        var user_id = localStorage.getItem("user_id");
+        var user_id = parseInt(localStorage.getItem("user_id"));
         var userArrayIndex = 0;
 
         console.log("==================================================")
@@ -13,14 +13,18 @@ function grabsUserData() {
         console.log("==================================================")
         console.log("user response from DB:");
         console.log(response);
-
+        console.log("response length " + response.length )
+        console.log(typeof(user_id))
         //filter user array for correct user
         for(var i = 0; i<response.length; i++){
             if(response[i].id === user_id){
                 userArrayIndex = i;
-                return;
+                
             }
         }
+
+        console.log("==================================================")
+        console.log("userArrayIndex: " + userArrayIndex)
 
         //diplay user calor info
         $("#user-name-1").text(response[userArrayIndex].first_name +" "+ response[userArrayIndex].last_name);
@@ -38,6 +42,9 @@ function grabsUserData() {
         
     })
 };
+
+
+
 //Attaches on-click events for menu items
 
 function startMenuCall () {
