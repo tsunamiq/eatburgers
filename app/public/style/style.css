@@ -1,5 +1,5 @@
 body {
-	background: black;
+	background: grey;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -80,6 +80,7 @@ body {
 }
 
 
+
 #results-display-header {
 	font-weight: bolder;
 }
@@ -106,6 +107,17 @@ body {
 	font-weight: lighter;
 	color: white;
 	font-family: 'Raleway', sans-serif;
+}
+
+#filter-sidebar {
+	position: absolute;
+	top: 10%;
+	right: 85%;
+	background: black;
+	opacity: 0.7;
+	height: 70%;
+	width: 10%;
+	color: white;
 }
 
 #home-prompt-2 {

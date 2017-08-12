@@ -57,6 +57,26 @@ function startMenuCall () {
                 $(restaurantDiv).append(priceColumn);
                 $(restaurantDiv).append(locationColumn);
                 
+                //Adds price and calorie values to each div
+                $(restaurantDiv).attr("calories", response[i].calories);
+                $(restaurantDiv).attr("price", response[i].price);
+
+                //Adds on-click events to each div
+                $(restaurantDiv).on("click",function(){
+                    var calorieValue = parseInt($(this).attr("calories"));
+                    var priceValue = $(this).attr("price");
+                    var beforeCaloriesLeft = parseInt($("#calories-left-1").text());
+                    var afterCaloriesLeft = beforeCaloriesLeft - calorieValue;
+                    $("#calories-left-1").text(afterCaloriesLeft);
+                    var beforeCaloriesConsumed = parseInt($("#user-calories-consumed").text());
+                    var afterCaloriesConsumed = beforeCaloriesConsumed + calorieValue;
+                    $("#calories-consumed").text(afterCaloriesConsumed);
+                    console.log(afterCaloriesLeft);
+                    console.log(calorieValue);
+                    console.log(priceValue);
+
+                })
+
                 //Appends the display container div to the page container
                 $("#search-submit-shadow").append(restaurantDiv);
             }  
